@@ -1,0 +1,66 @@
+/* my first css */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffcc;
+}
+
+img {
+    border: .5rem solid rgb(90, 233, 90);
+    /* border-radius: 1rem; */
+    border-radius: 50%;
+}
+
+h1 {
+    border: 0.3rem dotted red;
+}
+
+h2 {
+    background-color: azure;
+}
+
+h3 {
+    border: solid;
+    background-color: white;
+}
+
+p {
+    border: 0.2rem solid orange;
+    border-radius: .5em;
+}
+
+blockquote p {
+    border: none;
+}
+
+a {
+    color: rgb(40, 74, 242);
+    font-weight: bold;
+    font-style: italic;
+}
+
+ul li {
+    color: rgb(217, 111, 243);
+    text-transform: italic;
+
+}
+
+blockquote {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+}
+
+cite {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* classes start with a period */
+.bigbold {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+
