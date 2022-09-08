@@ -1,0 +1,7 @@
+.graph-paper {
+    background-color: #e5e5f7;
+    opacity: 0.4;
+    background-image:  linear-gradient(#3e84e8 3.2px, transparent 3.2px), linear-gradient(90deg, #3e84e8 3.2px, transparent 3.2px), linear-gradient(#3e84e8 1.6px, transparent 1.6px), linear-gradient(90deg, #3e84e8 1.6px, #e5e5f7 1.6px);
+    background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+    background-position: -3.2px -3.2px, -3.2px -3.2px, -1.6px -1.6px, -1.6px -1.6px;    
+}
