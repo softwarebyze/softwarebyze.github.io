@@ -8,88 +8,81 @@
 </style>
 <script>
    
-var subjectObject = {
-    //TODO: add emojis
-    //TODO: same idea for kosher
-  "Beef, bison, veal, goat, and lamb": {
-    "Steaks, roasts, chops": ["145, Rest time: 3 minutes"],
-    "Ground meat and sausage": ["160"],  
-  },
-  "Casseroles": {
-    "Meat and meatless": ["165"],
-  },
-  "Chicken, turkey, and other poultry": {
-    "All: whole bird, breasts, legs, thighs, wings, ground poultry, giblets, sausage, and stuffing inside poultry": ["165"],
-  },
-  "Eggs": {
-    "Raw eggs": ["Cook until yolk and white are firm"],
-    "Egg dishes (such as frittata, quiche)": ["160"],  
-  },
-  "Ham": {
-    "Raw ham": ["145, Rest time: 3 minutes"],
-    "Precooked ham (to reheat)": ["165, Note: Reheat cooked hams packaged in USDA-inspected plants to 140°F"],  
-  },
-  "Leftovers": {
-    "Any type": ["165"],
-  },
-  "Pork": {
-    "Steaks, roasts, chops": ["145, Rest time: 3 minutes"],
-    "Ground meat and sausage": ["160"],  
-  },
-  "Rabbit and venison": {
-    "Wild or farm-raised": ["160"],
-  },
-  "Seafood": {
-    "Fish (whole or filet), such as salmon, tuna, tilapia, pollock, bass, cod, catfish, trout, etc.": ["145 or cook until flesh is no longer translucent and separates easily with a fork"],
-    "Shrimp, lobster, crab, and scallops": ["Cook until flesh is pearly or white, and opaque"],
-    "Clams, oysters, mussels": ["Cook until shells open during cooking"],
-  },
-  
-}
+  //TODO: add emojis
+  //TODO: same idea for kosher
 
-window.onload = function() {
-    var groupSel = document.getElementById("group");
-    var tempSel = document.getElementById("temp");
-    var typeSel = document.getElementById("type");
-    for (var x in subjectObject) {
-        groupSel.options[groupSel.options.length] = new Option(x, x);
-    }
-    groupSel.onchange = function() {
+  var foods = {
+    "Beef, bison, veal, goat, and lamb": {
+      "Steaks, roasts, chops": ["145, Rest time: 3 minutes"],
+      "Ground meat and sausage": ["160"],  
+    },
+    "Casseroles": {
+      "Meat and meatless": ["165"],
+    },
+    "Chicken, turkey, and other poultry": {
+      "All: whole bird, breasts, legs, thighs, wings, ground poultry, giblets, sausage, and stuffing inside poultry": ["165"],
+    },
+    "Eggs": {
+      "Raw eggs": ["Cook until yolk and white are firm"],
+      "Egg dishes (such as frittata, quiche)": ["160"],  
+    },
+    "Ham": {
+      "Raw ham": ["145, Rest time: 3 minutes"],
+      "Precooked ham (to reheat)": ["165, Note: Reheat cooked hams packaged in USDA-inspected plants to 140°F"],  
+    },
+    "Leftovers": {
+      "Any type": ["165"],
+    },
+    "Pork": {
+      "Steaks, roasts, chops": ["145, Rest time: 3 minutes"],
+      "Ground meat and sausage": ["160"],  
+    },
+    "Rabbit and venison": {
+      "Wild or farm-raised": ["160"],
+    },
+    "Seafood": {
+      "Fish (whole or filet), such as salmon, tuna, tilapia, pollock, bass, cod, catfish, trout, etc.": ["145 or cook until flesh is no longer translucent and separates easily with a fork"],
+      "Shrimp, lobster, crab, and scallops": ["Cook until flesh is pearly or white, and opaque"],
+      "Clams, oysters, mussels": ["Cook until shells open during cooking"],
+    },
+  }
 
-        typeSel.length = 1;
-        tempSel.length = 1;
-
-        for (var y in subjectObject[this.value]) {
-            tempSel.options[tempSel.options.length] = new Option(y, y);
-        }
-    }
-    tempSel.onchange = function() {
-
-        typeSel.length = 1;
-
-        var z = subjectObject[groupSel.value][this.value];
-        for (var i = 0; i < z.length; i++) {
-            typeSel.options[typeSel.options.length] = new Option(z[i], z[i]);
-        }
-    }
-}
+  window.onload = function() {
+      var groupSel = document.getElementById("group");
+      var typeSel = document.getElementById("type");
+      var result = document.getElementById("result");
+      for (var x in foods) {
+          groupSel.options[groupSel.options.length] = new Option(x, x);
+      }
+      groupSel.onchange = function() {
+          typeSel.length = 1;
+          for (var y in foods[this.value]) {
+              typeSel.options[typeSel.options.length] = new Option(y, y);
+          }
+      }
+      typeSel.onchange = function() {
+          // result.textContent = foods.
+          result.textContent = foods.
+      }
+  }
 </script>
 <body>
     <h1>Safe Minimum Internal Temperature for Cooking</h1>
     <h2>Website by Zack Ebenfeld</h2>
     <h3>Created 09/06/2022</h3>
-    <form name="form1" id="form1" action="/action_page.php">
-        Food Group: <select name="group" id="group">
+    <form id="form1" action="/action_page.php">
+        Food Group: <select id="group">
             <option value="" selected="selected">Select food</option>
         </select>
         <br><br>
-        Type: <select name="temp" id="temp">
+        Type: <select id="type">
             <option value="" selected="selected">Please select food first</option>
         </select>
-        <br><br>
-        Internal Temperature (℉): <select name="type" id="type">
+        <!-- Internal Temperature (℉): <select name="type" id="type">
             <option value="" selected="selected">Please select type first</option>
-        </select>
+        </select> -->
+        <p>Required Temperature (℉):</p>
+        <p id="result"></p>
         <br><br>
     </form>
 
