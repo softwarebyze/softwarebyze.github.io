@@ -2,28 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cook Temps</title>
+    <title>Food Safety</title>
 </head>
 <style>
+  form {
+    border: 1em solid green;
+    padding: 1em;}
+  #Temperature {
+    border: 1em solid red;
+    padding: 1em;}
+  #temp {
+    font-size: 1.5em;
+  }
 </style>
 <script>
    
-var subjectObject = {
-    //TODO: add emojis
-    //TODO: same idea for kosher
-  "Beef, bison, veal, goat, and lamb": {
-    "Steaks, roasts, chops": ["145, Rest time: 3 minutes"],
-    "Ground meat and sausage": ["160"],  
+var foods = {
+  "🥩 Beef, bison, veal, goat, and lamb": {
+    "🥩 Steaks, roasts, chops": ["145, Rest time: 3 minutes"],
+    "🌭 Ground meat and sausage": ["160"],  
   },
-  "Casseroles": {
+  "🥘 Casseroles": {
     "Meat and meatless": ["165"],
   },
-  "Chicken, turkey, and other poultry": {
-    "All: whole bird, breasts, legs, thighs, wings, ground poultry, giblets, sausage, and stuffing inside poultry": ["165"],
+  "🐔 Chicken, turkey, and other poultry": {
+    "🐔 All: whole bird, breasts, legs, thighs, wings, ground poultry, giblets, sausage, and stuffing inside poultry": ["165"],
   },
-  "Eggs": {
-    "Raw eggs": ["Cook until yolk and white are firm"],
-    "Egg dishes (such as frittata, quiche)": ["160"],  
+  "🥚 Eggs": {
+    "🍳 Raw eggs": ["Cook until yolk and white are firm"],
+    " Egg dishes (such as frittata, quiche)": ["160"],  
   },
   "Ham": {
     "Raw ham": ["145, Rest time: 3 minutes"],
@@ -48,54 +55,63 @@ var subjectObject = {
 }
 
 window.onload = function() {
+  var groupSel = document.getElementById("group");
+  var typeSel = document.getElementById("type");
+  var tempSel = document.getElementById("temp");
+  for (var x in foods) {
+    groupSel.options[groupSel.options.length] = new Option(x, x);
+  }
+  document.getElementById("Result").style.visibility = 'hidden';
+  groupSel.onchange = function() {
+    document.getElementById("Result").style.visibility = 'visible';
+    //get food group selection
     var groupSel = document.getElementById("group");
-    var tempSel = document.getElementById("temp");
+    //get selected type
     var typeSel = document.getElementById("type");
-    for (var x in subjectObject) {
-        groupSel.options[groupSel.options.length] = new Option(x, x);
+    //reset types
+    typeSel.length = 1;
+    //add types for group
+    for (var y in foods[this.value]) {
+      typeSel.options[typeSel.options.length] = new Option(y, y);
     }
-    groupSel.onchange = function() {
-
-        typeSel.length = 1;
-        tempSel.length = 1;
-
-        for (var y in subjectObject[this.value]) {
-            tempSel.options[tempSel.options.length] = new Option(y, y);
-        }
-    }
-    tempSel.onchange = function() {
-
-        typeSel.length = 1;
-
-        var z = subjectObject[groupSel.value][this.value];
-        for (var i = 0; i < z.length; i++) {
-            typeSel.options[typeSel.options.length] = new Option(z[i], z[i]);
-        }
-    }
+    var typeSel = document.getElementById("type");
+    var typeSel = document.getElementById("type");
+    typeSel.remove(typeSel[1]);
+    //get the temp from foods
+    var temp = foods[groupSel.value][typeSel.value];
+    var tempP = document.getElementById("temp"); 
+    tempP.innerHTML = temp[0];
+  }
+  typeSel.onchange = function() {
+    document.getElementById("Result").style.visibility = 'visible';
+    var typeSel = document.getElementById("type");
+    var tempP = document.getElementById("temp");
+    // typeSel.length = 1;
+    var temp = foods[groupSel.value][typeSel.value];
+    tempP.innerHTML = temp[0];
+  }
 }
 </script>
 <body>
-    <h1>Safe Minimum Internal Temperature for Cooking</h1>
-    <h2>Website by Zack Ebenfeld</h2>
-    <h3>Created 09/06/2022</h3>
-    <form name="form1" id="form1" action="/action_page.php">
-        Food Group: <select name="group" id="group">
-            <option value="" selected="selected">Select food</option>
-        </select>
-        <br><br>
-        Type: <select name="temp" id="temp">
-            <option value="" selected="selected">Please select food first</option>
-        </select>
-        <br><br>
-        Internal Temperature (℉): <select name="type" id="type">
-            <option value="" selected="selected">Please select type first</option>
-        </select>
-        <br><br>
-    </form>
-
+    <h1>Safe Minimum Internal Temperature for Cooking 🧑‍🍳</h1>
+    <h4>Website by Zack Ebenfeld 👋🏻</h4>
+    <h5>Created 09/06/2022</h5>
+    <h3>1. Choose Food 🍔 to Cook</h3>
+    <h4><form name="form1" id="form1" action="/action_page.php">
+        <p><label>Food Group: <select name="group" id="group">
+            <option value="" selected="selected">Select food 🍔</option>
+        </select></label></p>
+        <p>
+          <label>Type: <select name="type" id="type">
+              <option value="" selected="selected">Please select food first</option>
+          </select></label>
+        </p>
+    </form></h4>
+    <div id="Result">
+      <h3>2. See Below for Cooking Safety Information</h3>
+      <h4><p id="Temperature">Internal Temperature (℉): <a name="temp" id="temp"></a></p></h4>
+    </div>
     <p>Source: <a href="https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" target="_blank">FoodSafety.gov</a></p>
-    
     <p><a href="index.html">Back to main page</a></p>
-    
 </body>
 </html>
