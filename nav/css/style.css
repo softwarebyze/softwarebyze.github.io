@@ -1,0 +1,28 @@
+
+nav {
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    /* border: solid purple; */
+    
+}
+
+nav ol {
+    padding-left: 0;
+}
+
+nav li{
+    display: inline-block;
+    /* border: solid orange; */
+}
+
+nav li a::after {
+    display: inline-block;
+    color: #000;
+    content: '>';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px 0 3px;
+    /* border:solid red */
+}
+
+
