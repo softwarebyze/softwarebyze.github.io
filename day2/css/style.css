@@ -2,31 +2,44 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: hwb(214 42% 10% / 0.733);
+    /* background-color: hwb(214 42% 10% / 0.733); */
+    background-color: #C2E7F2;
 }
 
 img {
-    border: .5rem solid rgba(241, 241, 52, 0.749);
+    /* border: .5rem solid rgba(241, 241, 52, 0.749); */
+    border: .5rem solid #F1F0E2;
     /* border-radius: 1rem; */
     border-radius: 18%;
 }
 
+h1, h2, h3 {
+    padding: .2em;
+}
+
 h1 {
-    border: 0.3rem dotted red;
-    text-decoration: lime underline .1em;
+    /* border: 0.3rem dotted red; */
+    border: 0.3rem dotted #D9BB93;
+    /* text-decoration: lime underline .1em; */
+    text-decoration:  underline .1em;
 }
 
 h2 {
-    background-color: azure;
+    /* background-color: azure; */
+    background-color: #F25652;
 }
 
 h3 {
     border: solid;
-    background-color: white;
+    /* background-color: white; */
+    background-color: #3E4E59;
+    color: white;
+    
 }
 
 p {
-    border: 0.2rem solid orange;
+    /* border: 0.2rem solid orange; */
+    border: 0.2rem solid ;
     border-radius: .5em;
 }
 
@@ -35,7 +48,9 @@ blockquote p {
 }
 
 ul a {
-    color: rgb(40, 74, 242);
+    /* color: rgb(40, 74, 242); */
+    color: #D9BB93;
+    background-color: #3E4E59;
     font-weight: bold;
     font-style: italic;
 }
@@ -47,6 +62,7 @@ ul a:hover {
 }
 a.harvard {
     color: maroon;
+    background-color: #F1F0E2;
 }
 ul li {
     color: rgb(217, 111, 243);
@@ -73,7 +89,8 @@ cite {
 }
 
 .pbj {
-    color:magenta;
+    /* color:magenta; */
+
 }
 
 .blah {

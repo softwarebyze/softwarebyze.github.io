@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+.oneinch {
+    width: 1in;
+}
+
+.twentyfivemm {
+    width: 25mm;
+}
+
+.twoinch {
+    width: 2in;
+}
+
+.threeinch {
+    width: 3in;
+}
+
+.fivetymm {
+    width: 50mm;
+}
+
+.fourinch {
+    width: 4in;
+}
+
+.twocm {
+    width: 2cm;
+}
+
+.fivecm {
+    width: 5cm;
+}
+
+.ruler {
+    background-color: orange;
+    text-align: center;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+    font-size: 1rem;
+    border: 1px solid black;
+}
