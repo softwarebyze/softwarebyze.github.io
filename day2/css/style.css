@@ -2,17 +2,18 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffcc;
+    background-color: hwb(214 42% 10% / 0.733);
 }
 
 img {
-    border: .5rem solid rgb(90, 233, 90);
+    border: .5rem solid rgba(241, 241, 52, 0.749);
     /* border-radius: 1rem; */
-    border-radius: 50%;
+    border-radius: 18%;
 }
 
 h1 {
     border: 0.3rem dotted red;
+    text-decoration: lime underline .1em;
 }
 
 h2 {
@@ -33,12 +34,20 @@ blockquote p {
     border: none;
 }
 
-a {
+ul a {
     color: rgb(40, 74, 242);
     font-weight: bold;
     font-style: italic;
 }
-
+ul a:link {
+    text-decoration: none;
+}
+ul a:hover {
+    color: pink;
+}
+a.harvard {
+    color: maroon;
+}
 ul li {
     color: rgb(217, 111, 243);
     text-transform: italic;
@@ -63,4 +72,36 @@ cite {
     font-size: 1.3rem;
 }
 
+.pbj {
+    color:magenta;
+}
 
+.blah {
+    font-weight: 1;
+}
+
+.rotate {
+    transform: rotate(-30deg);
+}
+
+.warning {
+    color: red;
+    font-weight: bold;
+}
+
+#heading {
+    text-transform: uppercase;
+}
+
+p img {
+    border-color:brown
+}
+
+.height {
+    line-height: 12em
+}
+
+#about {
+    color:grey;
+    font-style: italic;
+}
