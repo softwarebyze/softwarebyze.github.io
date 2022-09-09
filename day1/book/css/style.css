@@ -29,7 +29,7 @@ h1, .article .title {
 
 .article .title {
 /* span { */
-    text-align: center;
+    /* text-align: center; */
     font-size: 2em;
     /* border-bottom: dotted rgb(30, 123, 30) 4px; */
     margin:10px;
