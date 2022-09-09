@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Food Safety</title>
 </head>
+<link rel="stylesheet" href="../nav/css/style.css">
 <style>
   form {
     border: 1em solid green;
@@ -92,25 +93,31 @@ window.onload = function() {
 }
 </script>
 <body>
-    <h1>Safe Minimum Internal Temperature for Cooking 🧑‍🍳</h1>
-    <h4>Website by Zack Ebenfeld 👋🏻</h4>
-    <h5>Created 09/06/2022</h5>
-    <h3>1. Choose Food to Cook 🍽</h3>
-    <h4><form name="form1" id="form1" action="/action_page.php">
-        <p><label>Food Category: <select name="group" id="group">
-            <option value="" selected="selected">Select Food Category</option>
-        </select></label></p>
-        <p>
-          <label id="Category">Food Item: <select name="type" id="type">
-              <option value="" selected="selected">Select Food Category First</option>
-          </select></label>
-        </p>
-    </form></h4>
-    <div id="Result">
-      <h3>2. See Below for Cooking Safety Information</h3>
-      <h4><p id="Temperature"><a name="temp" id="temp"></a></p></h4>
-    </div>
-    <p>Source: <a href="https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" target="_blank">FoodSafety.gov</a></p>
-    <p><a href="index.html">Back to main page</a></p>
+  <nav>
+    <ol>
+        <li><a href="..">github root index</a></li>
+        <li><a href="cook_temp.html">cook_temp/cook_temp.html</a></li>
+    </ol>
+</nav>
+  <h1>Safe Minimum Internal Temperature for Cooking 🧑‍🍳</h1>
+  <h4>Website by Zack Ebenfeld 👋🏻</h4>
+  <h5>Created 09/06/2022</h5>
+  <h3>1. Choose Food to Cook 🍽</h3>
+  <h4><form name="form1" id="form1" action="/action_page.php">
+      <p><label>Food Category: <select name="group" id="group">
+          <option value="" selected="selected">Select Food Category</option>
+      </select></label></p>
+      <p>
+        <label id="Category">Food Item: <select name="type" id="type">
+            <option value="" selected="selected">Select Food Category First</option>
+        </select></label>
+      </p>
+  </form></h4>
+  <div id="Result">
+    <h3>2. See Below for Cooking Safety Information</h3>
+    <h4><p id="Temperature"><a name="temp" id="temp"></a></p></h4>
+  </div>
+  <p>Source: <a href="https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" target="_blank">FoodSafety.gov</a></p>
+  <p><a href="index.html">Back to main page</a></p>
 </body>
 </html>
