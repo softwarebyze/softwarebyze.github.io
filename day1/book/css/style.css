@@ -33,6 +33,7 @@ h1, .article .title {
     font-size: 2em;
     /* border-bottom: dotted rgb(30, 123, 30) 4px; */
     margin:10px;
+    width:30em;
 }
 
 .article .body {
