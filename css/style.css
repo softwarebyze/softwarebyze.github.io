@@ -1,4 +1,5 @@
 @import "../nav/css/style.css";
+@import "../knight-rider/css/style.css";
 
 :root {
     --dark-green: rgba(13, 13, 13, 0.936);
