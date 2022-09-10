@@ -1,27 +1,26 @@
-
-  .view_port {
-    background-color: black;
-    height: 30px;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 3px;
+.knight_rider_background {
+  background-color: black;
+  height: 30px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 3px;
 }
 
-.cylon_eye {
-    background-color: red;
-    background-image: linear-gradient(to right,
-    rgba(0, 0, 0, .9) 0%,
-    rgba(0, 0, 0, .1) 50%,
-    rgba(0, 0, 0, .9) 100%);
-    color: white;
-    height: 100%;
-    width: 20%;
-    border-radius: 3px;
-    /* border: 20px solid rgba(113, 36, 36, 0.27); */
-    animation: 1.8s linear 0s infinite alternate move_eye;
-  }
+.knight_rider_eye {
+  background-color: red;
+  background-image: linear-gradient(to right,
+  rgba(0, 0, 0, .9) 0%,
+  rgba(0, 0, 0, .1) 50%,
+  rgba(0, 0, 0, .9) 100%);
+  color: white;
+  height: 100%;
+  width: 20%;
+  border-radius: 3px;
+  /* border: 20px solid rgba(113, 36, 36, 0.27); */
+  animation: 1.8s linear 0s infinite alternate knight_rider_move_eye;
+}
   
-  @keyframes move_eye { 
-    from { margin-left: 0; } 
-    to { margin-left: 80%; }
-  }
+@keyframes knight_rider_move_eye { 
+  from { margin-left: 0; } 
+  to { margin-left: 80%; }
+}
