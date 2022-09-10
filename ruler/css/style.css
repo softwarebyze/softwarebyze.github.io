@@ -2,37 +2,13 @@
     box-sizing: border-box;
 }
 
-.oneinch {
-    width: 1in;
-}
-
-.twentyfivemm {
-    width: 25mm;
-}
-
-.twoinch {
-    width: 2in;
-}
-
-.threeinch {
-    width: 3in;
-}
-
-.fivetymm {
-    width: 50mm;
-}
-
-.fourinch {
-    width: 4in;
-}
-
-.twocm {
-    width: 2cm;
-}
-
-.fivecm {
-    width: 5cm;
-}
+.mm {width: 20mm;}
+.cm {width: 1cm;}
+.in {width: 1in;}
+.rem {width: 3rem;}
+.em {width: 3em;}
+.pct {width: 10%;}
+.px {width: 100px;}
 
 .ruler {
     background-color: orange;
