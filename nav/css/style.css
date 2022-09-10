@@ -1,28 +1,26 @@
-
-nav {
-    box-sizing: border-box;
-    border-bottom: 1px solid black;
-    /* border: solid purple; */
-    
-}
-
 nav ol {
-    padding-left: 0;
+    padding: 0;
+}
+/*  */
+nav ol li:first-child a {
+    background-color: var(--dark-green);
+    color:lime;
+    padding: 4px 6px;
+    border-radius: 4px;
 }
 
-nav li{
-    display: inline-block;
-    /* border: solid orange; */
+/* The tilde ~ means "subsequent sibling" */
+/* So this is styling before an li that comes after an li */
+nav li ~ li::before {
+    content: '/';
+    padding-right: 5px;
 }
-
-nav li a::after {
-    display: inline-block;
-    color: #000;
-    content: '>';
-    font-size: 80%;
-    font-weight: bold;
-    padding: 0 3px 0 3px;
-    /* border:solid red */
+nav ol li{
+    display: inline-flex;
 }
-
-
+nav ol li a {
+    text-decoration: none;
+}
+nav ol li a:hover {
+    text-decoration: underline;
+}
