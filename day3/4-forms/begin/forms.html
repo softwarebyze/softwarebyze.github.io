@@ -14,11 +14,11 @@
 				<fieldset>
 					<legend>Your contact information</legend>
 					
-					<label for="name">Your name </label>
+					<label for="name">Your name</label>
 					<input type="text" id="name" name="name">
 					
 					<label for="phone">Phone number</label>
-					<input type="tel" id="phone" name="phone">
+					<input type="tel" id="phone" name="phone" placeholder="Don't forget your area code!">
 					
 					<label for="email">Email</label>
 					<input type="email" id="email" name="email">
@@ -48,11 +48,13 @@
 					</select>
 
 					<label for="comments">Special requests:</label>
-					<textarea name="comments" id="comments"></textarea>
+					<textarea name="comments" id="comments" placeholder="Tell me everything..."></textarea>
 
-					<label for="subscribe">Add me to your email list</label>
-					<input type="checkbox" id="subscribe" name="subscribe"></input>
-			</fieldset>
+					<label>
+					<input type="checkbox" checked name="subscribe">Add me to your email list</input>
+					</label>
+				</fieldset>
+				<button type="submit">Submit</button>
 			</form>				
 		</section>
 		<aside>
@@ -67,8 +69,4 @@
 	</div>
 </body>
 </html>
-
-
-
-
 
