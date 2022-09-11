@@ -13,85 +13,84 @@
   #Temperature {
     border: 1em solid red;
     padding: 1em;}
+  #Result {
+    visibility: hidden;
+  }
 </style>
 <script>
-   
-var foods = {
-  "🐄 Beef, 🦬 Bison, 🐮 Veal, 🐐 Goat, and 🐑 Lamb": {
-    "🥩 Steaks, roasts, chops": ["Internal Temperature: 145℉, Rest time: 3 minutes"],
-    "🌭 Ground meat and sausage": ["Internal Temperature: 160℉"],  
-  },
-  "🥘 Casseroles": {
-    "🥘 Meat and meatless": ["Internal Temperature: 165℉"],
-  },
-  "🐔 Chicken, turkey, and other poultry": {
-    "🐓 All: whole bird, breasts, legs, thighs, wings, ground poultry, giblets, sausage, and stuffing inside poultry": ["Internal Temperature: 165℉"],
-  },
-  "🥚 Eggs": {
-    "🍳 Raw eggs": ["Cook until yolk and white are firm"],
-    "🥮 Egg dishes (such as frittata, quiche)": ["Internal Temperature: 160℉"],  
-  },
-  "🐖 Ham": {
-    "🐽 Raw ham": ["Internal Temperature: 145℉, Rest time: 3 minutes"],
-    "🐷 Precooked ham (to reheat)": ["Internal Temperature: 165℉, Note: Reheat cooked hams packaged in USDA-inspected plants to 140℉"],  
-  },
-  "🌯 Leftovers": {
-    "🌯 Any type": ["Internal Temperature: 165℉"],
-  },
-  "🐷 Pork": {
-    "🥩 Steaks, roasts, chops": ["Internal Temperature: 145℉, Rest time: 3 minutes"],
-    "🌭 Ground meat and sausage": ["Internal Temperature: 160℉"],  
-  },
-  "🐰 Rabbit and venison": {
-    "🐇 Wild or farm-raised": ["Internal Temperature: 160℉"],
-  },
-  "🎣 Seafood": {
-    "🐟 Fish (whole or filet), such as salmon, tuna, tilapia, pollock, bass, cod, catfish, trout, etc.": ["Internal Temperature: 145℉ or cook until flesh is no longer translucent and separates easily with a fork"],
-    "🍤 Shrimp, lobster, crab, and scallops": ["Cook until flesh is pearly or white, and opaque"],
-    "🦪 Clams, oysters, mussels": ["Cook until shells open during cooking"],
-  },
-  
-}
+  var foods = {
+    "🐄 Beef, 🦬 Bison, 🐮 Veal, 🐐 Goat, and 🐑 Lamb": {
+      "🥩 Steaks, roasts, chops": ["Internal Temperature: 145℉, Rest time: 3 minutes"],
+      "🌭 Ground meat and sausage": ["Internal Temperature: 160℉"],  
+    },
+    "🥘 Casseroles": {
+      "🥘 Meat and meatless": ["Internal Temperature: 165℉"],
+    },
+    "🐔 Chicken, turkey, and other poultry": {
+      "🐓 All: whole bird, breasts, legs, thighs, wings, ground poultry, giblets, sausage, and stuffing inside poultry": ["Internal Temperature: 165℉"],
+    },
+    "🥚 Eggs": {
+      "🍳 Raw eggs": ["Cook until yolk and white are firm"],
+      "🥮 Egg dishes (such as frittata, quiche)": ["Internal Temperature: 160℉"],  
+    },
+    "🐖 Ham": {
+      "🐽 Raw ham": ["Internal Temperature: 145℉, Rest time: 3 minutes"],
+      "🐷 Precooked ham (to reheat)": ["Internal Temperature: 165℉, Note: Reheat cooked hams packaged in USDA-inspected plants to 140℉"],  
+    },
+    "🌯 Leftovers": {
+      "🌯 Any type": ["Internal Temperature: 165℉"],
+    },
+    "🐷 Pork": {
+      "🥩 Steaks, roasts, chops": ["Internal Temperature: 145℉, Rest time: 3 minutes"],
+      "🌭 Ground meat and sausage": ["Internal Temperature: 160℉"],  
+    },
+    "🐰 Rabbit and venison": {
+      "🐇 Wild or farm-raised": ["Internal Temperature: 160℉"],
+    },
+    "🎣 Seafood": {
+      "🐟 Fish (whole or filet), such as salmon, tuna, tilapia, pollock, bass, cod, catfish, trout, etc.": ["Internal Temperature: 145℉ or cook until flesh is no longer translucent and separates easily with a fork"],
+      "🍤 Shrimp, lobster, crab, and scallops": ["Cook until flesh is pearly or white, and opaque"],
+      "🦪 Clams, oysters, mussels": ["Cook until shells open during cooking"],
+    },
+    
+  }
 
-window.onload = function() {
-  var groupSel = document.getElementById("group");
-  var typeSel = document.getElementById("type");
-  var tempSel = document.getElementById("temp");
-  for (var x in foods) {
-    groupSel.options[groupSel.options.length] = new Option(x, x);
-  }
-  document.getElementById("Result").style.visibility = 'hidden';
-  document.getElementById("Category").style.visibility = 'hidden';
-  groupSel.onchange = function() {
-    document.getElementById("Category").style.visibility = 'visible';
-    document.getElementById("Result").style.visibility = 'visible';
-    //get food group selection
+  window.onload = function() {
     var groupSel = document.getElementById("group");
-    //get selected type
     var typeSel = document.getElementById("type");
-    //reset types
-    typeSel.length = 1;
-    //add types for group
-    for (var y in foods[this.value]) {
-      typeSel.options[typeSel.options.length] = new Option(y, y);
+    var tempSel = document.getElementById("temp");
+    for (var x in foods) {
+      groupSel.options[groupSel.options.length] = new Option(x, x);
     }
-    var typeSel = document.getElementById("type");
-    var typeSel = document.getElementById("type");
-    typeSel.remove(typeSel[1]);
-    //get the temp from foods
-    var temp = foods[groupSel.value][typeSel.value];
-    var tempP = document.getElementById("temp"); 
-    tempP.innerHTML = temp[0];
+    groupSel.onchange = function() {
+      // document.getElementById("Category").style.visibility = 'visible';
+      document.getElementById("Result").style.visibility = 'visible';
+      //get food group selection
+      var groupSel = document.getElementById("group");
+      //get selected type
+      var typeSel = document.getElementById("type");
+      //reset types
+      typeSel.length = 1;
+      //add types for group
+      for (var y in foods[this.value]) {
+        typeSel.options[typeSel.options.length] = new Option(y, y);
+      }
+      var typeSel = document.getElementById("type");
+      typeSel.remove(typeSel[1]);
+      //get the temp from foods
+      var temp = foods[groupSel.value][typeSel.value];
+      var tempP = document.getElementById("temp"); 
+      tempP.innerHTML = temp[0];
+    }
+    typeSel.onchange = function() {
+      document.getElementById("Result").style.visibility = 'visible';
+      var typeSel = document.getElementById("type");
+      var tempP = document.getElementById("temp");
+      // typeSel.length = 1;
+      var temp = foods[groupSel.value][typeSel.value];
+      tempP.innerHTML = temp[0];
+    }
   }
-  typeSel.onchange = function() {
-    document.getElementById("Result").style.visibility = 'visible';
-    var typeSel = document.getElementById("type");
-    var tempP = document.getElementById("temp");
-    // typeSel.length = 1;
-    var temp = foods[groupSel.value][typeSel.value];
-    tempP.innerHTML = temp[0];
-  }
-}
 </script>
 <body>
   <nav>
@@ -104,16 +103,28 @@ window.onload = function() {
   <h4>Website by Zack Ebenfeld 👋🏻</h4>
   <h5>Created 09/06/2022</h5>
   <h3>1. Choose Food to Cook 🍽</h3>
-  <h4><form name="form1" id="form1" action="/action_page.php">
-      <p><label>Food Category: <select name="group" id="group">
-          <option value="" selected="selected">Select Food Category</option>
-      </select></label></p>
+  <h4>
+    <form name="form1" id="form1" action="/action_page.php">
       <p>
-        <label id="Category">Food Item: <select name="type" id="type">
-            <option value="" selected="selected">Select Food Category First</option>
-        </select></label>
+        <label>Food Category: 
+          <select name="group" id="group">
+            <option value="" selected="selected">
+              Select Food Category
+            </option>
+          </select>
+        </label>
       </p>
-  </form></h4>
+      <p>
+        <label>Food Item: 
+          <select name="type" id="type">
+            <option value="" selected="selected">
+              Select Food Category First
+            </option>
+          </select>
+        </label>
+      </p>
+    </form>
+  </h4>
   <div id="Result">
     <h3>2. See Below for Cooking Safety Information</h3>
     <h4><p id="Temperature"><a name="temp" id="temp"></a></p></h4>
