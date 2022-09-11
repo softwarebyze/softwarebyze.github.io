@@ -7,12 +7,35 @@
 <link rel="stylesheet" href="../css/style.css">
     
 <style>
+  nav {
+    background-color: paleturquoise;
+  }
+  h1 {
+    background-color: lemonchiffon;
+    margin: 0;
+    border: solid darkcyan 8px;
+  }
+  h3 {
+    border: solid 4px;
+    background-color: aquamarine;
+    border-radius: .5rem;
+    padding: .3rem .5rem;
+  }
+  h4, h5 {
+    background-color: lavender;
+    border: solid tomato 6px;
+    margin: 0;
+  }
   form {
-    border: 1em solid green;
-    padding: 1em;}
+    border: .3rem solid green;
+    padding: 0rem 1rem;
+    margin: .5rem 1.5rem;
+    background-color: pink;
+  }
   #Temperature {
     border: 1em solid red;
-    padding: 1em;}
+    /* padding: 1em; */
+  }
   #Result {
     visibility: hidden;
   }
@@ -98,33 +121,30 @@
         <li><a href="..">github root index</a></li>
         <li><a href="cook_temp.html">cook_temp/cook_temp.html</a></li>
     </ol>
-</nav>
+  </nav>
   <h1>Safe Minimum Internal Temperature for Cooking 🧑‍🍳</h1>
   <h4>Website by Zack Ebenfeld 👋🏻</h4>
   <h5>Created 09/06/2022</h5>
-  <h3>1. Choose Food to Cook 🍽</h3>
-  <h4>
-    <form name="form1" id="form1" action="/action_page.php">
-      <p>
-        <label>Food Category: 
-          <select name="group" id="group">
-            <option value="" selected="selected">
-              Select Food Category
-            </option>
-          </select>
-        </label>
-      </p>
-      <p>
-        <label>Food Item: 
-          <select name="type" id="type">
-            <option value="" selected="selected">
-              Select Food Category First
-            </option>
-          </select>
-        </label>
-      </p>
-    </form>
-  </h4>
+  <form name="form1" id="form1" action="/action_page.php">
+    <h3>1. Choose Food to Cook 🍽</h3>
+    <p>
+      <label for="group">Food Category:</label> 
+      <select name="group" id="group">
+        <option value="" selected="selected">
+          Select Food Category
+        </option>
+      </select>
+    </p>
+    <p>
+      <label for="type">Food Item: </label>
+      <select name="type" id="type">
+        <option value="" selected="selected">
+          Select Food Category First
+        </option>
+      </select>
+      
+    </p>
+  </form>
   <div id="Result">
     <h3>2. See Below for Cooking Safety Information</h3>
     <h4><p id="Temperature"><a name="temp" id="temp"></a></p></h4>
