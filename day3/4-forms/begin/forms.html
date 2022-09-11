@@ -33,13 +33,14 @@
 					<input type="number" id="qty" name="qty" min="1" max="10">
 
 					<p>What type of UFO do you prefer?</p>
-						<label><input type="radio" name="ufotype" value="classic">Classic oval UFO</input></label>
-						<label><input type="radio" name="ufotype" value="cruiser">Star Wars-style Imperial cruiser</input></label>
-						<label><input type="radio" name="ufotype" value="galactica">Battlestar Galactica-style Viper</input></label>
-						<label><input type="radio" name="ufotype" value="borg">Borg-style cube</input></label>
+					<label><input type="radio" name="ufotype" value="classic">Classic oval UFO</input></label>
+					<label><input type="radio" name="ufotype" checked value="cruiser">Star Wars-style Imperial cruiser</input></label>
+					<label><input type="radio" name="ufotype" value="galactica">Battlestar Galactica-style Viper</input></label>
+					<label><input type="radio" name="ufotype" value="borg">Borg-style cube</input></label>
 
-					<label for="abduction">What type of abduction experience do you want?</label>
-					<select id="abduction">
+					<label for="abtype">What type of abduction experience do you want?</label>
+					<select id="abtype" name="abtype">
+						<option selected>Select one...</option>
 						<option value="tour">Tour of the solar system</option>
 						<option value="dinner">Alien dinner and discussion</option>
 						<option value="dance">Alien dance lessons</option>
