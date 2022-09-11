@@ -32,13 +32,11 @@
 					<label for="qty">How many people would you like abducted?</label>
 					<input type="number" id="qty" name="qty" min="1" max="10">
 
-					<label for="ufotype">What type of UFO do you prefer?</label>
-					<select id="ufotype">
-						<option value="ufo">Classic oval UFO</option>
-						<option value="cruiser">Star Wars-style Imperial cruiser</option>
-						<option value="viper">Battlestar Galactica-style Viper</option>
-						<option value="cube">Borg-style cube</option>
-					</select> 
+					<p>What type of UFO do you prefer?</p>
+						<label><input type="radio" name="ufotype" value="classic">Classic oval UFO</input></label>
+						<label><input type="radio" name="ufotype" value="cruiser">Star Wars-style Imperial cruiser</input></label>
+						<label><input type="radio" name="ufotype" value="galactica">Battlestar Galactica-style Viper</input></label>
+						<label><input type="radio" name="ufotype" value="borg">Borg-style cube</input></label>
 
 					<label for="abduction">What type of abduction experience do you want?</label>
 					<select id="abduction">
