@@ -9,6 +9,11 @@ body {
 	margin: 0;
 	padding: 0;
 	background-image: url(../img/galaxy.jpg);
+	/* font-family: Mali; */
+}
+
+h1, h3, legend {
+	font-family: Mali, cursive;
 }
 
 .wrapper {
