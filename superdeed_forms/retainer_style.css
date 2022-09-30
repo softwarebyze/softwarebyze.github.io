@@ -28,6 +28,7 @@ div input[type="number"] {
 input {
     border: none;
     border-bottom: 1px solid;
+    font-size: medium;
 }
 span {
     font-size: 0.85rem;
@@ -36,6 +37,7 @@ textarea {
     padding: 0;
     margin-left: 0.5rem;
     /* width: 100%; */
+    font-size: medium;
 }
 p {
     padding:  0.5rem;
