@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="https://formspree.io/f/xeqdgyrl" method="POST">
+    <h1>SINGLE - WILL <input type="checkbox" name="will" id="will">
+        - TRUST <input type="checkbox" name="trust" id="trust"></h1>
+    <h1>CONFIDENTIAL INFORMATION</h1>
+    <p>
+        <label for="consult">Date of 1st Consultation:
+            <input type="date" name="consult" id="consult">
+        </label>
+        <label for="signing">Signing Date:
+            <input type="date" name="signing" id="signing">
+        </label>
+    </p>
+    <p>
+        <label for="keep-copy">Client will keep COPY of Will 
+            <input type="checkbox" name="keep-copy" id="keep-copy">
+        </label>
+        <label for="keep-original">Client will keep ORIGINAL of Will 
+            <input type="checkbox" name="keep-original" id="keep-original">
+        </label>
+    </p>
+    <p>
+        <label for="first-name">FIRST NAME
+            <input type="text" name="first-name" id="first-name">
+        </label>
+    </p>
+    <p>
+        <label for="middle-name">Middle Name
+            <input type="text" name="middle-name" id="middle-name">
+        </label>
+    </p>
+    <p>
+        <label for="last-name">LAST NAME
+            <input type="text" name="last-name" id="last-name">
+        </label>
+    </p>
+    <p>
+        <label for="address">ADDRESS
+            <input type="text" name="address" id="address">
+        </label>
+    </p>
+    <p>
+        <label for="county">County
+            <input type="text" name="county" id="county">
+        </label>
+    </p>
+    <p>
+        <label for="home-phone">HOME PHONE #
+            <input type="tel" name="home-phone" id="home-phone">
+        </label>
+    </p>
+    <p>
+        <label for="cell-phone">CELL PHONE #
+            <input type="tel" name="cell-phone" id="cell-phone">
+        </label>
+    </p>
+    <p>
+        <label for="email">E-MAIL ADDRESS
+            <input type="email" name="email" id="email">
+        </label>
+    </p>
+    <p>
+        <label for="ss">SS #
+            <input type="number" name="ss" id="ss">
+        </label>
+    </p>
+    <p>Names of Children and marital status:</p>
+    <div class="children">
+        <div class="child1">
+            <p>
+                <label for="child1-name">Name
+                    <input type="text" name="child1-name" id="child1-name">
+                </label>
+                <select id="child1-whose" name="child1-whose">
+                    <option value="joint">Joint</option>
+                    <option value="mr">Mr.</option>
+                    <option value="mrs">Mrs.</option>
+                </select>
+                <label class="radio" for="child1-marital-status">S
+                    <input type="radio" name="child1-marital-status" id="child1-single">
+                </label>
+                <label class="radio" for="child1-marital-status">M 
+                    <input type="radio" name="child1-marital-status" id="child1-married">
+                </label>
+            </p>
+            <p>
+                <label for="child1-address">Address
+                    <input type="text" name="child1-address" id="child1-address">
+                </label>
+            </p>
+            <p>
+                <label for="child1-phone">Phone #
+                    <input type="tel" name="child1-phone" id="child1-phone">
+                </label>
+            </p>
+        </div>
+    </div>
+    <button type="button" onclick="addChild()" class="add">+</button>
+    <button type="button" onclick="removeLastChild()" class="remove">-</button>
+    <p>
+        <label>Successor Trustee
+            <input type="text" name="successor-trustee" id="successor-trustee">
+        </label>
+    </p>
+    <p>
+        <label>2nd Successor Trustee
+            <input type="text" name="2nd-successor-trustee" id="2nd-successor-trustee">
+        </label>
+    </p>
+    <p>
+        <label>Personal Representative
+            <input type="text" name="personal-rep" id="personal-rep">
+        </label>
+    </p>
+    <p>
+        <label>Successor Personal Representative
+            <input type="text" name="successor-personal-rep" id="successor-personal-rep">
+        </label>
+    </p>
+    <p>
+        <label>Durable Power of Attorney
+            <input type="text" name="durable" id="durable">
+        </label>
+    </p>
+    <p>
+        <label>Successor Durable Power of Attorney
+            <input type="text" name="successor-durable" id="successor-durable">
+        </label>
+    </p>
+    <p>Health Care Surrogate</p>
+    <p>
+        <label>Name
+            <input type="text" name="hcs-name" id="hcs-name">
+        </label>
+        <label>Relationship:
+            <input type="text" name="hcs-relation" id="hcs-relation">
+        </label>
+    </p>
+    <p>
+        <label>Address
+            <input type="text" name="hcs-address" id="hcs-address">
+        </label>
+    </p>
+    <p>
+        <label>Phone #
+            <input type="text" name="hcs-phone" id="hcs-phone">
+        </label>
+    </p>
+    <p>Successor Health Care Surrogate(s)</p>
+    <p>
+        <label>Name
+            <input type="text" name="shcs1-name" id="shcs1-name">
+        </label>
+        <label>Relationship:
+            <input type="text" name="shcs1-relation" id="shcs1-relation">
+        </label>
+    </p>
+    <p>
+        <label>Address
+            <input type="text" name="shcs1-address" id="shcs1-address">
+        </label>
+    </p>
+    <p>
+        <label>Phone #
+            <input type="text" name="shcs1-phone" id="shcs1-phone">
+        </label>
+    </p>
+    <p>
+        <label>Name
+            <input type="text" name="shcs2-name" id="shcs2-name">
+        </label>
+        <label>Relationship:
+            <input type="text" name="shcs2-relation" id="shcs2-relation">
+        </label>
+    </p>
+    <p>
+        <label>Address
+            <input type="text" name="shcs2-address" id="shcs2-address">
+        </label>
+    </p>
+    <p>
+        <label>Phone #
+            <input type="text" name="shcs2-phone" id="shcs2-phone">
+        </label>
+    </p>
+    <p>
+        <label>Living Will
+            <input type="text" name="living-will" id="living-will">
+        </label>
+    </p>
+    <p>
+        <label>If Minor Children - Legal Guardian
+            <input type="text" name="legal-guardian" id="legal-guardian">
+        </label>
+    </p>
+    <p>
+        <label>Successor Guardian
+            <input type="text" name="successor-guardian" id="successor-guardian">
+        </label>
+    </p>
+    <p>
+        <label>Birthday
+            <input type="date" name="birthday" id="birthday">
+        </label>
+    </p>
+    <p>
+        <label>DISTRIBUTION
+            <p><textarea name="distribution" id="distribution"></textarea></p>
+        </label>
+    </p>
+    <p>
+        <label>NOTES
+            <p><textarea name="notes" id="notes"></textarea></p>
+        </label>
+    </p>
+    <p>
+        <label>Referred By:
+            <input type="text" name="referred" id="referred">
+        </label>
+    </p>
+    <button type="submit">Submit</button>
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html>

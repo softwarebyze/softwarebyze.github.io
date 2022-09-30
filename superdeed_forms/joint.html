@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="https://formspree.io/f/xeqdgyrl" method="POST">
+    <h1>JOINT - WILLS <input type="checkbox" name="wills" id="wills">
+        - TRUSTS <input type="checkbox" name="trusts" id="trusts"></h1>
+    <h1>CONFIDENTIAL INFORMATION</h1>
+    <p>
+        <label for="consult">Date of 1st Consultation:
+            <input type="date" name="consult" id="consult">
+        </label>
+        <label for="signing">Signing Date:
+            <input type="date" name="signing" id="signing">
+        </label>
+    </p>
+    <p>
+        <label for="keep-copy">Client will keep COPY of Will 
+            <input type="checkbox" name="keep-copy" id="keep-copy">
+        </label>
+        <label for="keep-original">Client will keep ORIGINAL of Will 
+            <input type="checkbox" name="keep-original" id="keep-original">
+        </label>
+    </p>
+    <p>
+        <label for="mr-first-name">Husband's First Name
+            <input type="text" name="mr-first-name" id="mr-first-name">
+        </label>
+    </p>
+    <p>
+        <label for="mr-middle-name">Middle Name
+            <input type="text" name="mr-middle-name" id="mr-middle-name">
+        </label>
+    </p>
+    <p>
+        <label for="mr-last-name">Last Name
+            <input type="text" name="mr-last-name" id="mr-last-name">
+        </label>
+    </p>
+    <p>
+        <label for="mrs-first-name">Wife's First Name
+            <input type="text" name="mrs-first-name" id="mrs-first-name">
+        </label>
+    </p>
+    <p>
+        <label for="mrs-middle-name">Middle Name
+            <input type="text" name="mrs-middle-name" id="mrs-middle-name">
+        </label>
+    </p>
+    <p>
+        <label for="mrs-last-name">Last Name
+            <input type="text" name="mrs-last-name" id="mrs-last-name">
+        </label>
+    </p>
+    <p>
+        <label for="address">Address
+            <input type="text" name="address" id="address">
+        </label>
+    </p>
+    <p>
+        <label for="county">County
+            <input type="text" name="county" id="county">
+        </label>
+    </p>
+    <p>
+        <label for="home-phone">Home Phone #
+            <input type="tel" name="home-phone" id="home-phone">
+        </label>
+    </p>
+    <p>
+        <label for="mr-cell-phone">Mr. Cell Phone #
+            <input type="tel" name="mr-cell-phone" id="mr-cell-phone">
+        </label>
+    </p>
+    <p>
+        <label for="mrs-cell-phone">Mrs. Cell Phone #
+            <input type="tel" name="mrs-cell-phone" id="mrs-cell-phone">
+        </label>
+    </p>
+    <p>
+        <label for="email">E-mail Address
+            <input type="email" name="email" id="email">
+        </label>
+    </p>
+    <p>
+        <label for="mr-ss">Husband's SS #
+            <input type="number" name="mr-ss" id="mr-ss">
+        </label>
+    </p>
+    <p>
+        <label for="mrs-ss">Wife's SS #
+            <input type="number" name="mrs-ss" id="mrs-ss">
+        </label>
+    </p>
+    <p>Names of Children and Marital Status:</p>
+    <div class="children">
+        <div class="child1">
+            <p>
+                <label for="child1-name">Name
+                    <input type="text" name="child1-name" id="child1-name">
+                </label>
+                <select id="whose" name="whose">
+                    <option value="joint">Joint</option>
+                    <option value="mr">Mr.</option>
+                    <option value="mrs">Mrs.</option>
+                </select>
+                <label class="radio" for="child1-marital-status">S
+                    <input type="radio" name="child1-marital-status" id="child1-single">
+                </label>
+                <label class="radio" for="child1-marital-status">M 
+                    <input type="radio" name="child1-marital-status" id="child1-married">
+                </label>
+            </p>
+            <p>
+                <label for="child1-address">Address
+                    <input type="text" name="child1-address" id="child1-address">
+                </label>
+            </p>
+            <p>
+                <label for="child1-phone">Phone #
+                    <input type="tel" name="child1-phone" id="child1-phone">
+                </label>
+            </p>
+        </div>
+    </div>
+    <button type="button" onclick="addChild()" class="add">+</button>
+    <button type="button" onclick="removeLastChild()" class="remove">-</button>
+    <p>
+        <label>Successor Trustee
+            <input type="text" name="successor-trustee" id="successor-trustee">
+        </label>
+    </p>
+    <p>
+        <label>2nd Successor Trustee
+            <input type="text" name="2nd-successor-trustee" id="2nd-successor-trustee">
+        </label>
+    </p>
+    <p>Personal Representative After Spouse</p>
+    <p>
+        <label>Husband
+            <input type="text" name="mr-personal-rep" id="mr-personal-rep">
+        </label>
+        <label>Wife
+            <input type="text" name="mrs-personal-rep" id="mrs-personal-rep">
+        </label>
+    </p>
+    <p>Successor Personal Representative After Spouse</p>
+    <p>
+        <label>Husband
+            <input type="text" name="mr-successor-personal-rep" id="mr-successor-personal-rep">
+        </label>
+        <label>Wife
+            <input type="text" name="mrs-successor-personal-rep" id="mrs-successor-personal-rep">
+        </label>
+    </p>
+    <p>Durable Power of Attorney</p>
+    <p>
+        <label>Husband
+            <input type="text" name="mr-durable" id="mr-durable">
+        </label>
+        <label>Wife
+            <input type="text" name="mrs-durable" id="mrs-durable">
+        </label>
+    </p>
+    <p>Successor Durable Power of Attorney</p>
+    <p>
+        <label>Husband
+            <input type="text" name="mr-successor-durable" id="mr-durable">
+        </label>
+        <label>Wife
+            <input type="text" name="mrs-successor-durable" id="mrs-durable">
+        </label>
+    </p>
+    <p>Health Care Surrogate/Living Will for <em>Husband</em> After Wife</p>
+    <p>
+        <label>Name
+            <input type="text" name="mr-hcs-name" id="mr-hcs-name">
+        </label>
+        <label>Relationship:
+            <input type="text" name="mr-hcs-relation" id="mr-hcs-relation">
+        </label>
+    </p>
+    <p>
+        <label>Address
+            <input type="text" name="mr-hcs-name" id="mr-hcs-name">
+        </label>
+    </p>
+    <p>
+        <label>Phone #
+            <input type="text" name="mr-hcs-name" id="mr-hcs-name">
+        </label>
+    </p>
+    <p>Successor Health Care Surrogate/Living Will for <em>Husband</em> After Wife</p>
+    <p>
+        <label>Name
+            <input type="text" name="mr-shcs-name" id="mr-shcs-name">
+        </label>
+        <label>Relationship:
+            <input type="text" name="mr-shcs-relation" id="mr-shcs-relation">
+        </label>
+    </p>
+    <p>
+        <label>Address
+            <input type="text" name="mr-shcs-name" id="mr-shcs-name">
+        </label>
+    </p>
+    <p>
+        <label>Phone #
+            <input type="text" name="mr-shcs-name" id="mr-shcs-name">
+        </label>
+    </p>
+    </p>
+    <p>Health Care Surrogate/Living Will for <em>Wife</em> After Husband</p>
+    <p>
+        <label>Name
+            <input type="text" name="mrs-hcs-name" id="mrs-hcs-name">
+        </label>
+        <label>Relationship:
+            <input type="text" name="mrs-hcs-relation" id="mrs-hcs-relation">
+        </label>
+    </p>
+    <p>
+        <label>Address
+            <input type="text" name="mrs-hcs-name" id="mrs-hcs-name">
+        </label>
+    </p>
+    <p>
+        <label>Phone #
+            <input type="text" name="mrs-hcs-name" id="mrs-hcs-name">
+        </label>
+    </p>
+    <p>Successor Health Care Surrogate/Living Will for <em>Wife</em> After Husband</p>
+    <p>
+        <label>Name
+            <input type="text" name="mrs-shcs-name" id="mrs-shcs-name">
+        </label>
+        <label>Relationship:
+            <input type="text" name="mrs-shcs-relation" id="mrs-shcs-relation">
+        </label>
+    </p>
+    <p>
+        <label>Address
+            <input type="text" name="mrs-shcs-name" id="mrs-shcs-name">
+        </label>
+    </p>
+    <p>
+        <label>Phone #
+            <input type="text" name="mrs-shcs-name" id="mrs-shcs-name">
+        </label>
+    </p>
+    <p>
+        <label>If Minor Children - Legal Guardian
+            <input type="text" name="legal-guardian" id="legal-guardian">
+        </label>
+    </p>
+    <p>
+        <label>Successor Guardian
+            <input type="text" name="successor-guardian" id="successor-guardian">
+        </label>
+    </p>
+    <p>
+        <label>Birthday - Husband
+            <input type="date" name="birthday" id="birthday">
+        </label>
+        <label>Wife
+            <input type="date" name="birthday" id="birthday">
+        </label>
+    </p>
+    <p>
+        <label>DISTRIBUTION Upon 2nd Death:
+            <textarea name="distribution" id="distribution"></textarea>
+        </label>
+    </p>
+    <p>
+        <label>Notes:
+            <textarea name="notes" id="notes"></textarea>
+        </label>
+    </p>
+    <p>
+        <label>Referred By:
+            <input type="text" name="referred" id="referred">
+        </label>
+    </p>
+    <button type="submit">Submit</button>
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html>
