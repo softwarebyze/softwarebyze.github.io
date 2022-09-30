@@ -26,6 +26,7 @@ textarea {
     max-width: 95%;
     height: 6rem;
     margin: 0 2rem 0.5rem 2rem;
+    font-family: 'Times New Roman', Times, serif;
 }
 label {
     padding: 0 2rem;
