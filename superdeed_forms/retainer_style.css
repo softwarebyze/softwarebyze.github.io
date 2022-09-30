@@ -32,3 +32,14 @@ input {
 span {
     font-size: 0.85rem;
 }
+textarea {
+    padding: 0;
+    margin-left: 0.5rem;
+    /* width: 100%; */
+}
+p {
+    padding:  0.5rem;
+}
+span {
+    padding-left: .1rem;
+}

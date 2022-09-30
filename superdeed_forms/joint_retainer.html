@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="retainer_style.css">
 </head>
 <body>
-    <form class="retainer">
-    <br><br>
-    <h1><em>JOINT REPRESENTATION</em></h1>
-    <h1><em>ESTATE PLANNING RETAINER AGREEMENT</em></h1>
-    <br>
+    <form class="retainer" action="https://formspree.io/f/mdojzovg" 
+    method="POST">
+        <br><br>
+        <h1><em>JOINT REPRESENTATION</em></h1>
+        <h1><em>ESTATE PLANNING RETAINER AGREEMENT</em></h1>
+        <br>
         <p style="text-align: justify;">
             The following is a retainer agreement between <input 
             style="width: 37%;" type="text" name="client-names" id="client-names"> 
@@ -23,7 +24,7 @@
         <br><br>
         <div class="flex">
             <div class="column">
-                <label for="address">Mr.
+                <label for="mr-name">Mr.
                     <input type="text" name="mr-name" id="mr-name">
                 </label>
                 <br>
@@ -83,7 +84,7 @@
                     DURABLE POWER OF ATTORNEY <span>@ $2.00 each</span>
                 </label>
                 <label for="pour-over-will-copies">
-                    <input type="number" min=0 name="pour-over-will-copies" id="simple-will-copies">
+                    <input type="number" min=0 name="pour-over-will-copies" id="pour-over-will-copies">
                     POUR OVER WILL <span>@ $5.00 each</span>
                 </label>
                 <label for="ab-revocable-copies">
@@ -98,9 +99,11 @@
                     <input type="number" min=0 name="other-docs-copies" id="other-docs-copies">
                     OTHER DOCUMENTS <span>@ $ <input type="number" name="other-docs-cost" id="other-docs-cost"> each</span>
                 </label>
+                <p><em>WARRANTY DEED FILING FEES</em></p>
+                <textarea name="fees" id="fees"></textarea>
             </div>
             <div class="column">
-                <label for="address">Mrs.
+                <label for="mrs-name">Mrs.
                     <input type="text" name="mrs-name" id="mrs-name">
                 </label>
                 <br>
@@ -141,8 +144,34 @@
                     <input type="checkbox" name="mrs-qtip" id="mrs-qtip">
                     Q-TIP REVOCABLE LIVING TRUST
                 </label>
+                <br>
+                <p><em>ADDITIONAL DOCUMENTS</em>:</p>
+                <br>
+                <label for="joint-revocable-trust">
+                    <input type="checkbox" name="joint-revocable-trust" id="joint-revocable-trust">
+                    JOINT REVOCABLE TRUST
+                </label>
+                <label for="deed-prep">
+                    <input type="checkbox" min=0 name="deed-prep" id="deed-prep">
+                    DEED PREPARATION <input type="number" name="number-of-deeds" id="number-of-deeds"> # OF DEEDS
+                </label>
+                <label for="super-deed">
+                    <input type="checkbox" name="super-deed" id="super-deed">
+                    SUPER DEED
+                </label>
+                <label for="irrevocable-life-ins-trust">
+                    <input type="checkbox" name="irrevocable-life-ins-trust" id="irrevocable-life-ins-trust">
+                    IRREVOCABLE LIFE INSURANCE TRUST
+                </label>
+                <label for="other-docs">
+                    <input type="checkbox" name="other-docs" id="other-docs">
+                    OTHER DOCUMENTS
+                </label>
+                <br>
+                <textarea name="other-documents" id="other-documents"></textarea>
             </div>
         </div>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
