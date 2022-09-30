@@ -51,3 +51,6 @@ span {
 .inline-block {
     display: inline-block;
 }
+input[type="date"] {
+    margin-left: .8rem;
+}
