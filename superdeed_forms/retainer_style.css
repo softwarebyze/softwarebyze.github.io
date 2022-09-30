@@ -54,3 +54,10 @@ span {
 input[type="date"] {
     margin-left: .8rem;
 }
+canvas {
+    border-bottom: 1px solid;
+}
+.right {
+    position: relative;
+    margin: 0 1rem 0 1rem;
+}
