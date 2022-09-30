@@ -45,3 +45,9 @@ p {
 span {
     padding-left: .1rem;
 }
+.justify {
+    text-align: justify;
+}
+.inline-block {
+    display: inline-block;
+}

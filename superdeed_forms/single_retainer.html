@@ -5,8 +5,211 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Single Retainer Agreement</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="retainer_style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.4/signature_pad.js" 
+    integrity="sha512-j36pYCzm3upwGd6JGq6xpdthtxcUtSf5yQJSsgnqjAsXtFT84WH8NQy9vqkv4qTV9hK782TwuHUTSwo2hRF+/A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    
+    <!-- TODO: CHANGE THE FORM's ACTION WHEN FORMSPREE WORKS AGAIN -->
+    <form class="retainer" action="https://formspree.io/f/mdojzovg" 
+    method="POST">
+        <br><br>
+        <h1><em>SINGLE</em></h1>
+        <h1><em>ESTATE PLANNING RETAINER AGREEMENT</em></h1>
+        <br>
+        <p style="text-align: justify;">
+            The following is a retainer agreement between <input 
+            style="width: 37%;" type="text" name="client-names" id="client-names"> 
+            and the Law Office of Gregory Ebenfeld, P.A. The law firm agrees to prepare the 
+            following checked documents for the price specified below:
+        </p>
+        <br><br>
+        <div class="flex">
+            <div class="column">
+                <label for="mr-name">Mr.
+                    <input type="text" name="mr-name" id="mr-name">
+                </label>
+                <br>
+                <label for="mr-simple-will">
+                    <input type="checkbox" name="mr-simple-will" id="mr-simple-will">
+                    SIMPLE WILL
+                </label>
+                <label for="mr-complex-will">
+                    <input type="checkbox" name="mr-complex-will" id="mr-complex-will">
+                    COMPLEX WILL
+                </label>
+
+                <label for="mr-pour-over-will">
+                    <input type="checkbox" name="mr-pour-over-will" id="mr-pour-over-will">
+                    POUR OVER WILL
+                </label>
+                <label for="mr-revocable-trust">
+                    <input type="checkbox" name="mr-revocable-trust" id="mr-revocable-trust">
+                    REVOCABLE TRUST
+                </label>
+                <label for="mr-durable-power">
+                    <input type="checkbox" name="mr-durable-power" id="mr-durable-power">
+                    DURABLE POWER OF ATTORNEY
+                </label>
+                <label for="mr-hcs">
+                    <input type="checkbox" name="mr-hcs" id="mr-hcs">
+                    HEALTH CARE SURROGATE
+                </label>
+                <label for="mr-living-will">
+                    <input type="checkbox" name="mr-living-will" id="mr-living-will">
+                    LIVING WILL
+                </label>
+                <br>
+                <p><em>ADDITIONAL PHOTOCOPIES</em>:<br><em>QTY.</em></p>
+                <label for="simple-will-copies">
+                    <input type="number" min=0 name="simple-will-copies" id="simple-will-copies">
+                    SIMPLE WILL <span>@ $3.00 each</span>
+                </label>
+                <label for="living-will-copies">
+                    <input type="number" min=0 name="living-will-copies" id="living-will-copies">
+                    LIVING WILL <span>@ $2.00 each</span>
+                </label>
+                <label for="hcs-copies">
+                    <input type="number" min=0 name="hcs-copies" id="hcs-copies">
+                    HEALTH CARE SURROGATE <span>@ $2.00 each</span>
+                </label>
+                <label for="durable-power-copies">
+                    <input type="number" min=0 name="durable-power-copies" id="durable-power-copies">
+                    DURABLE POWER OF ATTORNEY <span>@ $2.00 each</span>
+                </label>
+                <label for="pour-over-will-copies">
+                    <input type="number" min=0 name="pour-over-will-copies" id="pour-over-will-copies">
+                    POUR OVER WILL <span>@ $5.00 each</span>
+                </label>
+                <label for="ab-revocable-copies">
+                    <input type="number" min=0 name="ab-revocable-copies" id="ab-revocable-copies">
+                    A/B REVOCABLE LIVING TRUST <span>@ $8.00 each</span>
+                </label>
+                <label for="qtip-copies">
+                    <input type="number" min=0 name="qtip-copies" id="qtip-copies">
+                    Q-TIP REVOCABLE LIVING TRUST <span>@ $10.00 each</span>
+                </label>
+                <label for="other-docs-copies">
+                    <input type="number" min=0 name="other-docs-copies" id="other-docs-copies">
+                    OTHER DOCUMENTS <span>@ $ <input type="number" name="other-docs-cost" id="other-docs-cost"> each</span>
+                </label>
+                <p><em>WARRANTY DEED FILING FEES</em></p>
+                <textarea name="fees" id="fees"></textarea>
+            </div>
+            <div class="column">
+                <label for="mrs-name">Mrs.
+                    <input type="text" name="mrs-name" id="mrs-name">
+                </label>
+                <br>
+                <label for="mrs-simple-will">
+                    <input type="checkbox" name="mrs-simple-will" id="mrs-simple-will">
+                    SIMPLE WILL
+                </label>
+                <label for="mrs-complex-will">
+                    <input type="checkbox" name="mrs-complex-will" id="mrs-complex-will">
+                    COMPLEX WILL
+                </label>
+
+                <label for="mrs-pour-over-will">
+                    <input type="checkbox" name="mrs-pour-over-will" id="mrs-pour-over-will">
+                    POUR OVER WILL
+                </label>
+                <label for="mrs-revocable-trust">
+                    <input type="checkbox" name="mrs-revocable-trust" id="mrs-revocable-trust">
+                    REVOCABLE TRUST
+                </label>
+                <label for="mrs-durable-power">
+                    <input type="checkbox" name="mrs-durable-power" id="mrs-durable-power">
+                    DURABLE POWER OF ATTORNEY
+                </label>
+                <label for="mrs-hcs">
+                    <input type="checkbox" name="mrs-hcs" id="mrs-hcs">
+                    HEALTH CARE SURROGATE
+                </label>
+                <label for="mrs-living-will">
+                    <input type="checkbox" name="mrs-living-will" id="mrs-living-will">
+                    LIVING WILL
+                </label>
+                <br>
+                <p><em>ADDITIONAL DOCUMENTS</em>:</p>
+                <br>
+                <label for="joint-revocable-trust">
+                    <input type="checkbox" name="joint-revocable-trust" id="joint-revocable-trust">
+                    JOINT REVOCABLE TRUST
+                </label>
+                <label for="deed-prep">
+                    <input type="checkbox" min=0 name="deed-prep" id="deed-prep">
+                    DEED PREPARATION <input type="number" name="number-of-deeds" id="number-of-deeds"> # OF DEEDS
+                </label>
+                <label for="super-deed">
+                    <input type="checkbox" name="super-deed" id="super-deed">
+                    SUPER DEED
+                </label>
+                <label for="irrevocable-life-ins-trust">
+                    <input type="checkbox" name="irrevocable-life-ins-trust" id="irrevocable-life-ins-trust">
+                    IRREVOCABLE LIFE INSURANCE TRUST
+                </label>
+                <label for="other-docs">
+                    <input type="checkbox" name="other-docs" id="other-docs">
+                    OTHER DOCUMENTS
+                </label>
+                <br>
+                <textarea name="other-documents" id="other-documents"></textarea>
+            </div>
+        </div>
+        <p class="justify">
+            As a law firm, Gregory Ebenfeld, P.A. has a confidential relationship with each of it's clients. The firm provides
+            financial planning and other services which are required for effective estate and trust planning. I/we hereby authorize
+            the Law Office of Gregory A. Ebenfeld, P.A. to provide other professionals with my name and circumstances, as the
+            firm seesfit, and to explain them, in the event that I decide other financial advice is warranted. I/we understand that
+            this waiver of confidentiality is hereby understood and agreed to by me/us. Their compensation, if any, would be
+            separately provided for with the other professionals.
+        </p>
+        <p>
+            The total fee for the preceding preparation of requested documents is $ <input type="number" name="total-fee" id="total-fee">. The Law Office of Gregory
+            A. Ebenfeld, P.A. herewith accepts $ <input type="number" name="retainer-fee" id="retainer-fee"> as a non-refundable retainer, whether or not you allow the
+            firm to proceed with completing the documents. The balance of the fee is due and payable at the time of the execution
+            of the documents. At the time of the execution of the documents, you agree to pay in addition to the firm's total fee,
+            the recording costs and taxes for deeds and alike. All credit card transactions are subject to an additional four percent
+            (4%) fee, paid directly to VOLT Merchant Services.
+        </p>
+        <p>
+            Please provide twenty-four (24) hours notice for any changes to your scheduled appointment time. When a signing
+            appointment is made, any changes that occur the day of your scheduled appointment will result in a $60.00
+            change/rescheduling fee.
+        </p>
+        <p>
+            Our engagement will terminate after all documents are signed, or two (2) months after you are contacted that your
+            documents are ready to sign.
+        </p>
+        <div class="flex">
+            <div class="column">
+                <div class="flex-row">
+                    <div class="wrapper">
+                        <canvas id="mr-signature-pad" width="350" height="100"></canvas>
+                    </div>
+                    Mr. 
+                    <div class="mr-clear-btn inline-block">
+                        <button type="button" id="mr-clear">Clear</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="flex-row">
+                    <div class="wrapper">
+                        <canvas id="ms-signature-pad" width="350" height="100"></canvas>
+                    </div>
+                    Ms. 
+                    <div class="ms-clear-btn inline-block">
+                        <button type="button" id="ms-clear">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="signature-script.js"></script>
 </body>
 </html>
