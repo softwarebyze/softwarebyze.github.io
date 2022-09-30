@@ -1,6 +1,7 @@
 form {
     border: 1px solid;
     margin: 1rem;
+    font-weight: bold;
 }
 h1 {
     text-align: center;
@@ -42,4 +43,11 @@ button.add {
 }
 div.children div {
     margin-bottom: 1.75rem;
+}
+input {
+    border: none;
+    border-bottom: 1px solid;
+}
+div.basic input {
+    width: 60%;
 }
