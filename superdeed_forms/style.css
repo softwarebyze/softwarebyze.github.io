@@ -17,6 +17,8 @@ input[type="checkbox"] {
 }
 input {
     font-family: 'Times New Roman', Times, serif;
+    border: none;
+    border-bottom: 1px solid;
 }
 textarea {
     /* border: blue 1px solid; */
@@ -44,10 +46,6 @@ button.add {
 }
 div.children div {
     margin-bottom: 1.75rem;
-}
-input {
-    border: none;
-    border-bottom: 1px solid;
 }
 div.basic input {
     width: 60%;
