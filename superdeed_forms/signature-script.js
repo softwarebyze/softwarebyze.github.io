@@ -22,6 +22,7 @@ function mrSaveSig() {
 
 const mrSigCanvas = document.querySelector("canvas#mr-signature-pad");
 mrSigCanvas.onmouseup = mrSaveSig;
+mrSigCanvas.ontouchend = mrSaveSig;
 
 
 ////////////////////////////////////////////////////////////////
@@ -50,3 +51,4 @@ function msSaveSig() {
 
 const msSigCanvas = document.querySelector("canvas#ms-signature-pad");
 msSigCanvas.onmouseup = msSaveSig;
+msSigCanvas.ontouchend = msSaveSig;
