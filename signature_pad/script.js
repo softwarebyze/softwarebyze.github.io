@@ -1,3 +1,5 @@
+// Grab the canvas, make it a signature pad, and add clear button functionality
+
 const canvas = document.getElementById("signature-pad");
 
 const signaturePad = new SignaturePad(canvas, {
@@ -6,4 +8,6 @@ const signaturePad = new SignaturePad(canvas, {
 
 document.getElementById("clear").addEventListener('click', () => {
     signaturePad.clear();
+    const input = document.querySelector("input.sig-text");
+    input.value = '';
 });
