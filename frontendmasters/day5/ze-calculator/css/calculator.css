@@ -9,26 +9,25 @@ html {
 }
 body {
   padding: 0;
+  font-family: courier;
   margin: 0;
 }
 .wrapper {
-    /* width: 400px; */
     width: 400px;
-    /* border: 3px solid red; */
+    max-width: 100%;
+    height: auto;
     background-color: var(--dark-green);
     color: lime;
     border: lime 8px solid;
     border-radius: 1rem;
 }
 .calc-button-row {
-    /* border: 3px solid blue; */
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
 }
 .screen {
     text-align: right;
-    /* font-family: ; */
     padding: 0.5rem 1rem;
     font-size: 400%;
     border-bottom: 1px solid;
