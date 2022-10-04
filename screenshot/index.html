@@ -9,6 +9,7 @@
 <body>
   <div id="capture" style="padding: 10px; background: #f5da55">
     <h4 style="color: #000; ">Hello world!</h4>
+    <input type="text" name="testText" id="testText">
   </div>
 
   <button onclick="addScreenshot()" type="button">Add Screenshot</button>
@@ -18,7 +19,8 @@
   <script>
   function addScreenshot() {
     html2canvas(document.querySelector("#capture")).then(canvas => {
-      document.body.appendChild(canvas)
+      // document.body.appendChild(canvas)
+      console.log(canvas.toDataURL("image/jpeg", 1))
     });
   }
   </script>
