@@ -62,6 +62,7 @@ canvas {
     margin: 0 1rem 0 1rem;
 }
 input.mr-sig-dataurl,
-input.ms-sig-dataurl {
+input.ms-sig-dataurl,
+input.screenshoturl {
     display: none;
 }
