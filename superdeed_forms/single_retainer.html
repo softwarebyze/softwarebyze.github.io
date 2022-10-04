@@ -14,12 +14,10 @@
     integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        function screenshotAndSubmit() {
+        function saveScreenshot() {
             html2canvas(document.querySelector("#capture")).then(canvas => {
                 document.querySelector(".screenshoturl").value = canvas.toDataURL("image/jpeg", 1);
             });
-            form = document.querySelector("form");
-            form.submit();
         }
     </script>
 </head>
@@ -227,7 +225,8 @@
             <label for="date">Date: 
                 <input type="date" name="date" id="date">
             </label>
-            <button type="button" onclick="screenshotAndSubmit()">Submit</button>
+            <button type="button" onclick="saveScreenshot()">Save Screenshot</button>
+            <button type="submit">Submit</button>
         </form>
     </div>
     <script src="signature-script.js"></script>
