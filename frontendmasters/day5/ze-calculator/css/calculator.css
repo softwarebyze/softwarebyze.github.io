@@ -20,7 +20,6 @@ body {
     color: lime;
     border: lime 8px solid;
     border-radius: 1rem;
-    user-select: none;
 }
 .calc-button-row {
     display: flex;
@@ -43,6 +42,7 @@ body {
     border-radius: 0.2rem;
     font-family: inherit;
     margin: .3rem;
+    user-select: none;
 }
 .calc-button:hover {
     background-color: limegreen;
