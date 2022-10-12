@@ -1,6 +1,15 @@
 let runningTotal = 0;
 let buffer = '0';
-let previoudOperator = null;
+let previousOperator = null;
+let reverseConversion = false;
+
+const conversionAPIurl = 'https://open.er-api.com/v6/latest/USD'
+let conversionFactor;
+fetch(conversionAPIurl)
+    .then((response) => response.json())
+    .then((data) => {
+        conversionFactor = data.rates['ILS'];
+    });
 
 const screen = document.querySelector('.screen');
 
@@ -13,7 +22,7 @@ function buttonClick(value) {
     screen.innerText = buffer;
 }
 
-function handleSymbol(symbol){
+function handleSymbol(symbol) {
     switch (symbol) {
         case 'C':
             buffer = '0';
@@ -36,11 +45,34 @@ function handleSymbol(symbol){
             }
             break;
         case '+':
+            handleMath(symbol);
+            break;
         case '-':
+            handleMath(symbol);
+            break;
         case '*':
+            handleMath(symbol);
+            break;
         case '/':
             handleMath(symbol);
             break;
+        case '₪ → $':
+            convertShekels();
+            break;
+        case '$ → ₪':
+            convertShekels();
+            break;
+        case '⇆':
+            if (reverseConversion === false) {
+                reverseConversion = true;
+                document.querySelector('.convert').textContent = '$ → ₪';
+                break;
+            }
+            if (reverseConversion === true) {
+                reverseConversion = false;
+                document.querySelector('.convert').textContent = '₪ → $';
+                break;
+            }
     }
 }
 
@@ -75,11 +107,23 @@ function flushOperation(intBuffer) {
     }
 }
 
-function handleNumber(numberString){
+function handleNumber(numberString) {
     if (buffer === '0') {
         buffer = numberString;
     } else {
         buffer += numberString;
+    }
+}
+
+function convertShekels() {
+    const intBuffer = parseInt(buffer);
+    if (reverseConversion === false) {
+        runningTotal = intBuffer / conversionFactor;
+        buffer = runningTotal.toFixed(2).toString();
+    }
+    if (reverseConversion === true) {
+        runningTotal = intBuffer * conversionFactor;
+        buffer = runningTotal.toFixed(2).toString();
     }
 }
 
