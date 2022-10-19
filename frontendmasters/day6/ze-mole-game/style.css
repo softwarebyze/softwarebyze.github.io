@@ -34,3 +34,7 @@ body {
     width: 20%;
     aspect-ratio: 1;
 }
+
+.hole img {
+    width: 100%;
+}
