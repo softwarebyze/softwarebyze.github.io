@@ -37,3 +37,7 @@ body {
 .hole img {
     width: 100%;
 }
+
+.win {
+    background-image: url(./images/win.png);
+}
