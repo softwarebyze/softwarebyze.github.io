@@ -3,6 +3,7 @@ let root = document.querySelector(':root');
 let game = document.querySelector('.game');
 let holes = document.querySelectorAll('.hole');
 let flexes = document.querySelectorAll('.flex');
+let worm = document.querySelector('.worm');
 
 let currentState;
 let score = 0;
@@ -18,9 +19,9 @@ let appear = function(holes) {
             if (score === 10) {
                 game = document.querySelector('.game');
                 game.classList.add('win');
-                flexes = document.querySelectorAll('.flex');
                 flexes.forEach((flex) => {flex.style.visibility = 'hidden'});
                 holes.forEach((hole) => {hole.childNodes[0].style.visibility = 'hidden'});
+                worm.style.visibility = 'hidden';
                 console.log('u won boi')
             }
         });
