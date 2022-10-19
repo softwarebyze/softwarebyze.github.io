@@ -1,3 +1,5 @@
+let root = document.querySelector(':root');
+
 let game = document.querySelector('.game');
 let holes = document.querySelectorAll('.hole');
 let flexes = document.querySelectorAll('.flex');
@@ -11,6 +13,7 @@ let appear = function(holes) {
         hole.childNodes[0].style.visibility = 'visible';
         hole.childNodes[0].addEventListener('click', () => {
             score++;
+            root.style.setProperty('--percent', `${score*10}%`);
             console.log(score);
             if (score === 10) {
                 game = document.querySelector('.game');
