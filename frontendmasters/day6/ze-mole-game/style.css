@@ -10,10 +10,11 @@ body {
     padding: 0;
     display: grid;
     place-items: center;
+    cursor: url(./images/cursor.png), default;
 }
 
 .game {
-    max-width: 80%;
+    max-width: 95%;
     background-image: url(./images/background.png);
     background-size: cover;
 }
@@ -48,6 +49,18 @@ body {
     width: 100%;
 }
 
+.hungry {
+    cursor: url(./images/cursor-worm.png), default;
+}
+
+.gone,
+.hide {
+    display: none;
+}
+
 .win {
+    max-width: 95%;
+    max-height: 95%;
     background-image: url(./images/win.png);
+    background-size: cover;
 }
