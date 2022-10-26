@@ -41,7 +41,7 @@ h1 {
 .medium_15_black {
   font-weight: 500;
   font-size: 15px;
-  color: #192A3E;
+  color: #192a3e;
 }
 
 .o50 {
@@ -164,12 +164,12 @@ h1 {
 .search-input {
   border: 0;
   font-family: inherit;
-  color: #90A0B7;
+  color: #90a0b7;
   width: 90%;
 }
 
 .search-input::placeholder {
-  color: #90A0B7;
+  color: #90a0b7;
 }
 
 #search-icon {
@@ -200,6 +200,58 @@ h1 {
   /* flex: 3; */
 }
 
+.date-picker {
+  display: flex;
+  justify-content: space-between;
+  /* border: aqua 4px solid; */
+}
+
+.date-picker button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: inherit;
+  border: 0;
+  font-family: inherit;
+}
+
+.date-picker button span {
+  color: #334d6e;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  opacity: 0.5;
+}
+
+.date-picker button div {
+  color: #4c5862;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  justify-content: center;
+  padding: 0.25rem;
+  width: 24px;
+  height: 24px;
+}
+
+.date-picker button.current div {
+  /* border: solid red 2px; */
+  background: #109CF1;
+  color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.date-picker button:hover span,
+.date-picker button:hover div {
+  color: #109CF1;
+  opacity: 100;
+}
+
 .panel-header {
   display: flex;
   justify-content: space-between;
@@ -210,13 +262,13 @@ h1 {
 }
 
 .progress-bar-container {
-  background: #EBEFF2;
+  background: #ebeff2;
   border-radius: 3px;
 }
 
 .progress-bar {
-  background: #2ED47A;
-  border: #2ED47A solid 2px;
+  background: #2ed47a;
+  border: #2ed47a solid 2px;
   width: 80%;
   border-radius: 3px;
 }
