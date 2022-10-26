@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+
 html,
 body {
   height: 100%;
@@ -10,6 +14,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: row;
+    font-family: "Poppins";
 }
 
 .sidebar {
@@ -22,10 +27,32 @@ body {
 h1 {
     margin: 0;
     padding: 10px;
-    font-family: "Poppins";
+    font-family: "Open Sans";
     font-size: 18px;
     color: #109CF1;
     font-weight: 600;
+}
+
+.medium_14 {
+    font-weight: medium;
+    font-size: ;
+    border: 2px solid red;
+}
+
+.medium_11_gray {
+    font-weight: medium;
+    font-size: 11px;
+    color: #90A0B7;
+}
+
+.medium_13_darkblue {
+    font-weight: medium;
+    font-size: 13px;
+    color: #334D6E;
+}
+
+.o50 {
+    opacity: 50%;
 }
 
 .sidebar ul {
@@ -38,7 +65,8 @@ h1 {
   padding: 8px;
 }
 
-.sidebar li {
+.sidebar li,
+.settings {
   display: flex;
   align-items: center;
   padding-block: 4px;
