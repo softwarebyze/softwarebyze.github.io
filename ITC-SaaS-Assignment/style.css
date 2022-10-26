@@ -91,13 +91,21 @@ h1 {
 }
 
 .sidebar {
-  background: #ffffff;
-  z-index: 1;
-  width: 256px;
-  height: 100%;
-  box-shadow: 6px 0px 18px 0px #0000000f;
   display: flex;
   flex-direction: column;
+  width: 256px;
+  height: 100%;
+  z-index: 1;
+  background: #ffffff;
+  box-shadow: 6px 0px 18px 0px #0000000f;
+}
+
+.sidebar > h1,
+.sidebar > .profile,
+.sidebar ul,
+.sidebar > .settings,
+.sidebar > .toggle {
+  padding-inline: 24px;
 }
 
 @media (max-width: 600px) {
@@ -129,6 +137,13 @@ h1 {
   font-size: 13px;
   color: #192a3e;
   /* padding: 8px; */
+  padding-block: 10px;
+}
+
+.sidebar li span,
+.settings span,
+.toggle span {
+  padding-left: 14px;
 }
 
 .toggle {
@@ -140,11 +155,17 @@ h1 {
   /* margin: 2px 8px; */
 }
 
-.sidebar li.selected {
+.sidebar li.selected,
+.sidebar li:hover,
+.sidebar .settings:hover,
+.sidebar .toggle:hover span {
   color: #109cf1;
 }
 
-.sidebar li.selected svg path {
+.sidebar li.selected svg path,
+.sidebar li:hover svg path,
+.sidebar .settings:hover svg path,
+.sidebar .toggle:hover svg path {
   stroke: #109cf1;
 }
 
@@ -165,6 +186,8 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-left: 16px;
+  padding-block: 24px;
   /* border: solid red 2px; */
   /* margin-top: 16px; */
 }
@@ -181,12 +204,11 @@ h1 {
   display: flex;
   flex-direction: column;
   /* border: yellow solid 4px; */
-  background-color: #e5e5e5;
+  background-color: #f5f6f8;
   width: 100%;
 }
 
-.search,
-.sidebar h1 {
+.search {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -194,6 +216,10 @@ h1 {
   padding: 1rem;
   background: #ffffff;
   /* border: pink solid 3px; */
+}
+
+.sidebar h1 {
+  padding-block: 1rem;
 }
 
 .search-input {
@@ -216,7 +242,7 @@ h1 {
   width: 100%;
   /* height: 100%; */
   /* padding: 10px; */
-  /* margin: 20px; */
+  /* margin: 36px 20px; */
   /* border: goldenrod 4px dashed; */
 }
 
@@ -352,6 +378,9 @@ h1 {
   align-items: center;
 }
 
+.task-name {
+}
+
 .due-date span:first-child {
   font-family: "Poppins";
   font-style: normal;
@@ -384,7 +413,6 @@ h1 {
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
-
 }
 
 .glyphs {
@@ -397,9 +425,35 @@ h1 {
   display: none;
 }
 
+.task:hover {
+  box-shadow: 0px 0px 16px 0px #00000024;
+}
+
 .task:hover .edit-icon,
 .task:hover .delete-icon {
   display: inline-block;
+}
+
+.flag {
+  width: 84px;
+  height: 22px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 22px; /*match height to center vertically*/
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.flag.completed {
+  background-color: #2ed47a;
+}
+
+.flag.ended {
+  background-color: #f7685b;
 }
 
 #deals-graph {
