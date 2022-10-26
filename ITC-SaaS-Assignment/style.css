@@ -58,9 +58,10 @@ h1 {
 
 .sidebar {
   background: #ffffff;
+  z-index: 1;
   width: 256px;
   height: 100%;
-  /* box-shadow: 6px 0px 18px #0000000f; */
+  box-shadow: 6px 0px 18px 0px #0000000F;
   display: flex;
   flex-direction: column;
 }
@@ -197,7 +198,7 @@ h1 {
 }
 
 .main-panel {
-  /* flex: 3; */
+  flex-basis: 60%;
 }
 
 .date-picker {
