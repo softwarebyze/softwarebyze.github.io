@@ -61,7 +61,7 @@ h1 {
   z-index: 1;
   width: 256px;
   height: 100%;
-  box-shadow: 6px 0px 18px 0px #0000000F;
+  box-shadow: 6px 0px 18px 0px #0000000f;
   display: flex;
   flex-direction: column;
 }
@@ -242,14 +242,14 @@ h1 {
 
 .date-picker button.current div {
   /* border: solid red 2px; */
-  background: #109CF1;
-  color: #FFFFFF;
+  background: #109cf1;
+  color: #ffffff;
   border-radius: 50%;
 }
 
 .date-picker button:hover span,
 .date-picker button:hover div {
-  color: #109CF1;
+  color: #109cf1;
   opacity: 100;
 }
 
@@ -276,6 +276,14 @@ h1 {
 
 .side-panel {
   /* flex: 2; */
+}
+
+.show label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #6a707e;
 }
 
 .task {
