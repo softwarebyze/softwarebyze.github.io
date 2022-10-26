@@ -32,6 +32,18 @@ h1 {
   color: #90a0b7;
 }
 
+.medium_12_gray,
+.task-type {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+  letter-spacing: 0.01em;
+  color: #90a0b7;
+}
+
 .medium_13_darkblue {
   font-weight: 500;
   font-size: 13px;
@@ -44,6 +56,28 @@ h1 {
   color: #192a3e;
 }
 
+.medium_15_tableblack,
+.task-name {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  color: #323c47;
+}
+
+.regular_13_tablegrey,
+.assignee-name {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #707683;
+}
+
 .o50 {
   opacity: 50%;
 }
@@ -53,7 +87,7 @@ h1 {
   display: flex;
   flex-direction: row;
   font-family: "Poppins";
-  border: 4px solid purple;
+  /* border: 4px solid purple; */
 }
 
 .sidebar {
@@ -190,8 +224,7 @@ h1 {
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  /* margin: 20px; */
-  margin: 20px;
+  margin: 0.25rem;
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
   border-radius: 4px;
   padding-inline: 24px;
@@ -247,8 +280,10 @@ h1 {
   border-radius: 50%;
 }
 
-.date-picker button:hover span,
-.date-picker button:hover div {
+/* .date-picker button:hover span, */
+/* .date-picker button:hover div { */
+.date-picker button:hover *,
+.date-picker button.hovered * {
   color: #109cf1;
   opacity: 100;
 }
@@ -278,6 +313,11 @@ h1 {
   /* flex: 2; */
 }
 
+.show {
+  display: flex;
+  align-items: center;
+}
+
 .show label {
   font-style: normal;
   font-weight: 400;
@@ -286,11 +326,70 @@ h1 {
   color: #6a707e;
 }
 
+.show select {
+  border: 0;
+  color: #109cf1;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  appearance: none;
+  padding-inline: 5px;
+}
+
 .task {
   /* border: black solid 1px; */
   margin: 18px;
   padding-inline: 16px;
   box-shadow: 0px 2px 10px 0px #00000014;
+}
+
+.task-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.due-date span:first-child {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #4c5862;
+  opacity: 0.5;
+}
+
+.due-date span:last-child {
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #4c5862;
+}
+
+.task-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: lime 3px solid; */
+}
+
+.asignee {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+
+}
+
+.glyphs {
+  display: flex;
+  justify-content: space-between;
 }
 
 .edit-icon,
