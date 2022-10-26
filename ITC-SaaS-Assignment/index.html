@@ -213,11 +213,9 @@
     </section>
     <section class="main-content">
       <section class="search">
-        <label for="search-input"
-          ><img src="./images/search.svg" alt="search icon"
-        /></label>
+        <img id="search-icon" src="./images/search.svg" alt="search icon" />
         <input
-          class="search-box"
+          class="search-input"
           name="search-input"
           type="text"
           placeholder="Global search"
@@ -236,7 +234,9 @@
                 </select>
               </div>
             </div>
-            <div class="progress-bar"></div>
+            <div class="progress-bar-container">
+              <div class="progress-bar"></div>
+            </div>
           </div>
           <div class="date">
             <span class="current-date medium_15_black"
@@ -284,8 +284,16 @@
               <img src="./images/george.png" alt="George" class="asignee-img" />
               <span class="assignee-name">George Fields</span>
             </div>
-            <img src="./images/edit-icon.svg" alt="edit icon" />
-            <img src="./images/delete-icon.svg" alt="delete icon" />
+            <img
+              class="edit-icon"
+              src="./images/edit-icon.svg"
+              alt="edit icon"
+            />
+            <img
+              class="delete-icon"
+              src="./images/delete-icon.svg"
+              alt="delete icon"
+            />
             <div class="flag completed">Completed</div>
           </div>
           <div class="task">
@@ -303,8 +311,16 @@
               />
               <span class="assignee-name">Rebecca Moore</span>
             </div>
-            <img src="./images/edit-icon.svg" alt="edit icon" />
-            <img src="./images/delete-icon.svg" alt="delete icon" />
+            <img
+              class="edit-icon"
+              src="./images/edit-icon.svg"
+              alt="edit icon"
+            />
+            <img
+              class="delete-icon"
+              src="./images/delete-icon.svg"
+              alt="delete icon"
+            />
             <div class="flag ended">Ended</div>
           </div>
           <div class="task">
@@ -322,8 +338,16 @@
               />
               <span class="assignee-name">Lindsey Stroud</span>
             </div>
-            <img src="./images/edit-icon.svg" alt="edit icon" />
-            <img src="./images/delete-icon.svg" alt="delete icon" />
+            <img
+              class="edit-icon"
+              src="./images/edit-icon.svg"
+              alt="edit icon"
+            />
+            <img
+              class="delete-icon"
+              src="./images/delete-icon.svg"
+              alt="delete icon"
+            />
             <div class="flag completed">Completed</div>
           </div>
           <span>Show More</span>
@@ -339,19 +363,19 @@
                 </select>
               </div>
             </div>
-            <img src="./images/deals-graph.svg" alt="" />
+            <img id="deals-graph" src="./images/deals-graph.svg" alt="" />
           </section>
           <section class="tasks-chart-panel panel side-panel">
             <div class="panel-header">
-            <span class="current-date medium_15_black">Tasks</span>
-            <div class="show">
-              <label for="">Show:</label>
-              <select name="" id="">
-                <option selected value="week">This month</option>
-              </select>
+              <span class="current-date medium_15_black">Tasks</span>
+              <div class="show">
+                <label for="">Show:</label>
+                <select name="" id="">
+                  <option selected value="week">This month</option>
+                </select>
+              </div>
             </div>
-            </div>
-            <img src="./images/tasks-chart.svg" alt="" />
+            <img id="tasks-chart" src="./images/tasks-chart.svg" alt="" />
           </section>
         </section>
       </section>

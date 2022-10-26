@@ -60,7 +60,7 @@ h1 {
   background: #ffffff;
   width: 256px;
   height: 100%;
-  box-shadow: 6px 0px 18px #0000000f;
+  /* box-shadow: 6px 0px 18px #0000000f; */
   display: flex;
   flex-direction: column;
 }
@@ -68,6 +68,13 @@ h1 {
 @media (max-width: 600px) {
   .sidebar {
     display: none;
+  }
+}
+
+/* @media (max-width: 1380px) { */
+@media (max-width: 800px) {
+  .dashboard {
+    flex-direction: column;
   }
 }
 
@@ -138,15 +145,35 @@ h1 {
 .main-content {
   display: flex;
   flex-direction: column;
-  border: yellow solid 4px;
+  /* border: yellow solid 4px; */
   background-color: #e5e5e5;
   width: 100%;
 }
 
-.search {
+.search,
+.sidebar h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
+  padding: 1rem;
   background: #ffffff;
-  border: pink solid 3px;
+  /* border: pink solid 3px; */
+}
+
+.search-input {
+  border: 0;
+  font-family: inherit;
+  color: #90A0B7;
+  width: 90%;
+}
+
+.search-input::placeholder {
+  color: #90A0B7;
+}
+
+#search-icon {
+  margin-right: 0.5rem;
 }
 
 .dashboard {
@@ -155,13 +182,14 @@ h1 {
   /* height: 100%; */
   /* padding: 10px; */
   /* margin: 20px; */
-  border: goldenrod 4px dashed;
+  /* border: goldenrod 4px dashed; */
 }
 
 .panel {
   display: flex;
   flex-direction: column;
   background: #ffffff;
+  /* margin: 20px; */
   margin: 20px;
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
   border-radius: 4px;
@@ -169,7 +197,7 @@ h1 {
 }
 
 .main-panel {
-  flex: 3;
+  /* flex: 3; */
 }
 
 .panel-header {
@@ -181,13 +209,20 @@ h1 {
   /* border: 3px dashed red; */
 }
 
+.progress-bar-container {
+  background: #EBEFF2;
+  border-radius: 3px;
+}
+
 .progress-bar {
-  border: blue solid 2px;
+  background: #2ED47A;
+  border: #2ED47A solid 2px;
+  width: 80%;
   border-radius: 3px;
 }
 
 .side-panel {
-  flex: 2;
+  /* flex: 2; */
 }
 
 .task {
@@ -195,4 +230,22 @@ h1 {
   margin: 18px;
   padding-inline: 16px;
   box-shadow: 0px 2px 10px 0px #00000014;
+}
+
+.edit-icon,
+.delete-icon {
+  display: none;
+}
+
+.task:hover .edit-icon,
+.task:hover .delete-icon {
+  display: inline-block;
+}
+
+#deals-graph {
+  width: 90%;
+}
+
+#tasks-chart {
+  width: 50%;
 }
