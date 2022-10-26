@@ -1,0 +1,93 @@
+html,
+body {
+  height: 100%;
+  background-color: #e5e5e5;
+  margin: 0;
+  padding: 0;
+}
+
+.saas {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    background: #ffffff;
+    border: 3px solid green;
+    width: 256px;
+    height: 100%;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px;
+    font-family: "Poppins";
+    font-size: 18px;
+    color: #109CF1;
+    font-weight: 600;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #ebeff2;
+  padding: 8px;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding-block: 4px;
+  font-size: 13px;
+  color: #192a3e;
+}
+
+.sidebar img {
+  padding: 2px 8px;
+}
+
+.sidebar li.selected {
+  color: blue;
+}
+
+.profile {
+  display: flex;
+}
+
+.profile > img {
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.profile {
+  border-top: solid 1px #ebeff2;
+}
+
+.search {
+    width: 100%;
+}
+
+.dashboard {
+    background: #FFFFFF;
+    padding: 10px;
+}
+
+.task {
+    border: black solid 1px;
+    margin: 18px;
+}
+
+.task h3 {
+    padding: 0;
+    margin: 0;
+}

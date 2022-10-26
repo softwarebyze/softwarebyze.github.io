@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITC SaaS Assignment</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="saas">
+      <div class="sidebar">
+        <h1>SaaS Kit</h1>
+        <div class="profile">
+          <img src="./images/sierra.png" alt="sierra" />
+          <div class="profile-info">
+            <span class="name">Sierra Ferguson</span>
+            <span class="email">s.ferguson@gmail.com</span>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li class="selected">
+              <img src="./images/dashboard.svg" alt="" /><span>Dashboard</span>
+            </li>
+            <li><img src="./images/tasks.svg" alt="" /><span>Tasks</span></li>
+            <li><img src="./images/email.svg" alt="" /><span>Email</span></li>
+            <li>
+              <img src="./images/contacts.svg" alt="" /><span>Contacts</span>
+            </li>
+            <li><img src="./images/chat.svg" alt="" /><span>Chat</span></li>
+            <li><img src="./images/deals.svg" alt="" /><span>Deals</span></li>
+          </ul>
+        </nav>
+        <div class="settings">
+          <img src="./images/settings.svg" alt="" />
+          <span>Settings</span>
+        </div>
+        <div class="toggle">
+          <img src="./images/toggle.svg" alt="" />
+          <span>Toggle sidebar</span>
+        </div>
+      </div>
+      <div class="main">
+        <div class="search">
+          <label for="search"
+            ><img src="./images/search.svg" alt="search icon"
+          /></label>
+          <input class="search-box" name="search" type="text" placeholder="Global search" />
+          <img src="./images/notifications.svg" alt="notification bell" />
+        </div>
+        <div class="dashboard">
+          <div class="tasks">
+            <div class="completion">
+              <span>8 task completed out of 10</span>
+              <select name="" id="">
+                <option selected value="week">This Week</option>
+              </select>
+              <div class="progress-bar"></div>
+            </div>
+            <div class="date">
+                <h2 class="current-date">23 December, Sunday</h2>
+                <div class="date-picker">
+                  <button>
+                    <span> Sun </span>
+                    <span> 23 </span>
+                  </button>
+                  <button>
+                    <span> Mon </span>
+                    <span> 24 </span>
+                  </button>
+                  <button>
+                    <span> Tues </span>
+                    <span> 25 </span>
+                  </button>
+                  <button>
+                    <span> Wed </span>
+                    <span> 26 </span>
+                  </button>
+                  <button>
+                    <span> Thurs </span>
+                    <span> 27 </span>
+                  </button>
+                  <button>
+                    <span> Fri </span>
+                    <span> 23 </span>
+                  </button>
+                  <button>
+                    <span> Sat </span>
+                    <span> 23 </span>
+                  </button>
+                </div>
+            </div>
+              <div class="task">
+                <h3 class="task-name">Send benefit review by Sunday</h3>
+                <span class="task-type">Reminder</span>
+                <div class="due-date">
+                  <span>Due date:</span>
+                  <span>December 23, 2018</span>
+                </div>
+                <div class="asignee">
+                  <img
+                    src="./images/george.png"
+                    alt="George"
+                    class="asignee-img"
+                  />
+                  <span class="assignee-name">George Fields</span>
+                </div>
+                <img src="./images/edit-icon.svg" alt="edit icon" />
+                <img src="./images/delete-icon.svg" alt="delete icon" />
+                <div class="flag completed">Completed</div>
+              </div>
+              <div class="task">
+                <h3 class="task-name">Invite to office meet-up</h3>
+                <span class="task-type">Call</span>
+                <div class="due-date">
+                  <span>Due date:</span>
+                  <span>December 23, 2018</span>
+                </div>
+                <div class="asignee">
+                  <img
+                    src="./images/rebecca.png"
+                    alt="Rebecca"
+                    class="asignee-img"
+                  />
+                  <span class="assignee-name">Rebecca Moore</span>
+                </div>
+                <img src="./images/edit-icon.svg" alt="edit icon" />
+                <img src="./images/delete-icon.svg" alt="delete icon" />
+                <div class="flag ended">Ended</div>
+              </div>
+              <div class="task">
+                <h3 class="task-name">Office meet-up</h3>
+                <span class="task-type">Event</span>
+                <div class="due-date">
+                  <span>Due date:</span>
+                  <span>December 23, 2018</span>
+                </div>
+                <div class="asignee">
+                  <img
+                    src="./images/lindsey.png"
+                    alt="Lindsey"
+                    class="asignee-img"
+                  />
+                  <span class="assignee-name">Lindsey Stroud</span>
+                </div>
+                <img src="./images/edit-icon.svg" alt="edit icon" />
+                <img src="./images/delete-icon.svg" alt="delete icon" />
+                <div class="flag completed">Completed</div>
+              </div>
+            </div>
+            <span>Show More</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
