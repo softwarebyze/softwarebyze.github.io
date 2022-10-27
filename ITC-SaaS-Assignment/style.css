@@ -157,7 +157,6 @@ h1 {
 .sidebar .toggle:hover svg path {
   stroke: #109cf1;
   cursor: pointer;
-
 }
 
 .profile {
@@ -360,6 +359,10 @@ h1 {
   padding-inline: 5px;
 }
 
+.show select:hover {
+  cursor: pointer;
+}
+
 .task {
   /* border: black solid 1px; */
   margin: 18px;
@@ -465,6 +468,24 @@ h1 {
 
 #deals-graph {
   width: 90%;
+}
+
+.tasks-chart-legend {
+  display: flex;
+  flex-direction: column;
+  border: red 2px solid;
+}
+
+.graph-label {
+  height: 20px;
+  /* width: 200px; */
+  /* background: turquoise; */
+}
+
+.tasks-chart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #tasks-chart {
