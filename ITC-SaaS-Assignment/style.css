@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* border: 1px solid black; */
 }
 
 html,
@@ -115,6 +116,7 @@ h1 {
   list-style-type: none;
   /* padding-bottom: 10p; */
   border-bottom: 0.063rem solid #ebeff2;
+  padding-block: 1rem;
 }
 
 .sidebar li,
@@ -134,8 +136,13 @@ h1 {
   padding-left: 0.875rem;
 }
 
+.settings {
+  margin-top: 0.75rem;
+}
+
 .toggle {
   margin-top: auto;
+  padding-block: 1.7rem;
   /* padding: 22p 27p; */
 }
 
@@ -196,7 +203,7 @@ h1 {
   /* border: yellow solid 4p; */
   background-color: #f5f6f8;
   width: 100%;
-  border: red solid 0.25rem;
+  /* border: red solid 0.25rem; */
 }
 
 .search {
@@ -206,7 +213,7 @@ h1 {
   width: 100%;
   padding: 1rem;
   background: #ffffff;
-  border: pink solid 0.25rem;
+  /* border: pink solid 0.25rem; */
 }
 
 .sidebar h1 {
@@ -235,7 +242,7 @@ h1 {
   height: 100%;
   /* padding: 10p; */
   /* margin: 36p 20p; */
-  border: goldenrod 0.25rem dashed;
+  /* border: goldenrod 0.25rem dashed; */
 }
 
 .panel {
@@ -245,13 +252,17 @@ h1 {
   margin: 0.25rem;
   box-shadow: 0 0.375rem 1.125rem rgba(0, 0, 0, 0.06);
   border-radius: 0.25rem;
+  /* padding-inline: 1.5rem; */
+  /* border: gray 0.313rem solid; */
+}
+
+.panel > * {
   padding-inline: 1.5rem;
-  border: gray 0.313rem solid;
 }
 
 .main-panel {
   flex-basis: 60%;
-  border: 0.188rem solid green;
+  /* border: 0.188rem solid green; */
   height: 100%;
 }
 
@@ -263,6 +274,10 @@ h1 {
 .main-panel .panel {
   /* background: brown; */
   height: 100%;
+}
+
+.date {
+  border-bottom: 0.063rem solid #ebeff2;
 }
 
 .date-picker {
@@ -326,10 +341,11 @@ h1 {
   justify-content: space-between;
   padding-block: 1rem;
   border-bottom: 0.063rem solid #ebeff2;
+  /* background-color: yellow; */
 }
 
 .completion {
-  /* border: 3p dashed red; */
+  /* border: 3px dashed red; */
 }
 
 .progress-bar-container {
@@ -351,7 +367,7 @@ h1 {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
-  border: orange 0.188rem solid;
+  /* border: orange 0.188rem solid; */
 }
 
 .show {
@@ -491,6 +507,12 @@ h1 {
   width: 90%;
 }
 
+.deals-graph {
+  display: flex;
+  flex-direction: column;
+
+}
+
 .tasks-chart-legend {
   display: flex;
   flex-direction: column;
@@ -511,6 +533,10 @@ h1 {
   /* background: turquoise; */
 }
 
+.deals-graph-label {
+  margin-block: 1rem;
+}
+
 .tasks-chart {
   display: flex;
   flex-direction: row;
@@ -522,6 +548,17 @@ h1 {
 .tasks-chart .chart-graphic {
   width: 50%;
   /* border: red 20p solid; */
+}
+
+#show-more {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #109CF1;
 }
 
 @media (max-width: 600px) {
