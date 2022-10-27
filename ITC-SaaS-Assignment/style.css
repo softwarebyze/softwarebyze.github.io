@@ -93,7 +93,8 @@ h1 {
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 256px;
+  /* width: 256px; */
+  width: 20%;
   height: 100%;
   z-index: 1;
   background: #ffffff;
@@ -106,19 +107,6 @@ h1 {
 .sidebar > .settings,
 .sidebar > .toggle {
   padding-inline: 24px;
-}
-
-@media (max-width: 600px) {
-  .sidebar {
-    display: none;
-  }
-}
-
-/* @media (max-width: 1380px) { */
-@media (max-width: 800px) {
-  .dashboard {
-    flex-direction: column;
-  }
 }
 
 .sidebar ul {
@@ -160,6 +148,7 @@ h1 {
 .sidebar .settings:hover,
 .sidebar .toggle:hover span {
   color: #109cf1;
+  cursor: pointer;
 }
 
 .sidebar li.selected svg path,
@@ -167,6 +156,8 @@ h1 {
 .sidebar .settings:hover svg path,
 .sidebar .toggle:hover svg path {
   stroke: #109cf1;
+  cursor: pointer;
+
 }
 
 .profile {
@@ -253,7 +244,7 @@ h1 {
   margin: 0.25rem;
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
   border-radius: 4px;
-  padding-inline: 24px;
+  padding-inline: 1.5rem;
 }
 
 .main-panel {
@@ -264,6 +255,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   /* border: aqua 4px solid; */
+  margin-block: 1rem;
 }
 
 .date-picker button {
@@ -312,11 +304,14 @@ h1 {
 .date-picker button.hovered * {
   color: #109cf1;
   opacity: 100;
+  cursor: pointer;
 }
 
 .panel-header {
   display: flex;
   justify-content: space-between;
+  padding-block: 1rem;
+  border-bottom: 1px solid #ebeff2;
 }
 
 .completion {
@@ -333,6 +328,7 @@ h1 {
   border: #2ed47a solid 2px;
   width: 80%;
   border-radius: 3px;
+  margin-bottom: 1rem;
 }
 
 .side-panel {
@@ -367,7 +363,7 @@ h1 {
 .task {
   /* border: black solid 1px; */
   margin: 18px;
-  padding-inline: 16px;
+  padding: 1rem;
   box-shadow: 0px 2px 10px 0px #00000014;
 }
 
@@ -379,6 +375,11 @@ h1 {
 }
 
 .task-name {
+}
+
+.due-date {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .due-date span:first-child {
@@ -406,6 +407,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 0.75rem;
   /* border: lime 3px solid; */
 }
 
@@ -413,6 +415,10 @@ h1 {
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
+}
+
+.asignee-img {
+  margin-right: 0.75rem;
 }
 
 .glyphs {
@@ -427,6 +433,7 @@ h1 {
 
 .task:hover {
   box-shadow: 0px 0px 16px 0px #00000024;
+  cursor: pointer;
 }
 
 .task:hover .edit-icon,
@@ -462,4 +469,46 @@ h1 {
 
 #tasks-chart {
   width: 50%;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+
+  /* .panel,
+  .main-panel,
+  .side-panel */
+  .panel {
+    margin: 0;
+  }
+
+  .panel-name {
+    visibility: hidden;
+  }
+
+  #show-more {
+    display: none;
+  }
+
+  .date-picker * {
+    display: none;
+  }
+
+  .task:hover .edit-icon {
+    display: none;
+  }
+}
+
+/* @media (max-width: 1380px) { */
+@media (max-width: 800px) {
+  .dashboard {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1073px) {
+  .profile-info {
+    visibility: hidden;
+  }
 }
