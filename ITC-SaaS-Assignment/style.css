@@ -313,6 +313,10 @@ h1 {
   padding-block: 1rem;
 }
 
+.side-panels .panel-header {
+  border-bottom: 0.063rem solid #ebeff2;
+}
+
 .progress-bar-container {
   background: #ebeff2;
   border-radius: 0.188rem;
@@ -556,9 +560,8 @@ h1 {
   .deals-panel .panel-header {
     /* I think this looks ugly and wrong
     but I'm doing it to more exactly match
-    the Figma. */
+    the Figma. () */
     padding-inline-end: 0;
     margin-right: 1.5rem;
-    /* background: black; */
   }
 }
