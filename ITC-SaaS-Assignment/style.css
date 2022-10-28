@@ -594,38 +594,48 @@ h1 {
   .side-panel */
 }
 
-@media (max-width: 1380px) {
+@media (max-width: 1300px) {
   .sidebar {
-    display: none;
-  }
-
-  /* @media (max-width: 800px) { */
-  .dashboard {
-    flex-direction: column;
-  }
-
-  .panel {
-    margin: 0;
-    border-radius: 0;
-  }
-
-  .panel-name {
-    visibility: hidden;
-  }
-
-  #show-more {
-    display: none;
-  }
-
-  /* .date-picker * {
-      display: none;
-    } */
-
-  .task:hover .edit-icon {
     display: none;
   }
 }
 
+@media (max-width: 1000px) {
+  .dashboard {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 0px) {
+
+/* @media (max-width: 800px) { */
+
+.panel {
+  margin: 0;
+  border-radius: 0;
+}
+
+.panel-name {
+  visibility: hidden;
+}
+
+#show-more {
+  display: none;
+}
+
+/* .date-picker * {
+    display: none;
+  } */
+
+.task:hover .edit-icon {
+  display: none;
+}
+
+.side-panels {
+  /* display: none; */
+}
+}
 /* @media (max-width: 1073px) {
     .profile-info {
       visibility: hidden;
