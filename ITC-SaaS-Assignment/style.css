@@ -1,12 +1,9 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600"); */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: 1px solid black; */
 }
 
 html,
@@ -15,7 +12,6 @@ body {
 }
 
 h1 {
-  /* padding: 10p; */
   font-family: "Open Sans";
   font-size: 1.125rem;
   color: #109cf1;
@@ -88,13 +84,11 @@ h1 {
   display: flex;
   flex-direction: row;
   font-family: "Poppins";
-  /* border: 4p solid purple; */
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  /* width: 256p; */
   width: 22%;
   height: 100%;
   z-index: 1;
@@ -114,7 +108,6 @@ h1 {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  /* padding-bottom: 10p; */
   border-bottom: 0.063rem solid #ebeff2;
   padding-block: 1rem;
 }
@@ -126,7 +119,6 @@ h1 {
   align-items: center;
   font-size: 0.813rem;
   color: #192a3e;
-  /* padding: 8p; */
   padding-block: 0.625rem;
 }
 
@@ -143,11 +135,6 @@ h1 {
 .toggle {
   margin-top: auto;
   padding-block: 1.7rem;
-  /* padding: 22p 27p; */
-}
-
-.sidebar svg {
-  /* margin: 2p 8p; */
 }
 
 .sidebar li.selected,
@@ -169,13 +156,10 @@ h1 {
 .profile {
   display: flex;
   align-items: center;
-  /* border: blue solid 3p; */
   border-top: solid 0.063rem #ebeff2;
-  /* background: greenyellow; */
 }
 
 .profile > img {
-  /* margin: 20p; */
   border-radius: 50%;
 }
 
@@ -185,25 +169,13 @@ h1 {
   align-items: flex-start;
   padding-left: 1rem;
   padding-block: 1.5rem;
-  /* border: solid red 2p; */
-  /* margin-top: 16p; */
-}
-
-.name {
-  /* border: orange solid 3p; */
-}
-
-.email {
-  /* border: purple solid 3p; */
 }
 
 .main-content {
   display: flex;
   flex-direction: column;
-  /* border: yellow solid 4p; */
   background-color: #f5f6f8;
   width: 100%;
-  /* border: red solid 0.25rem; */
 }
 
 .search {
@@ -213,7 +185,6 @@ h1 {
   width: 100%;
   padding: 1rem;
   background: #ffffff;
-  /* border: pink solid 0.25rem; */
 }
 
 .sidebar h1 {
@@ -246,19 +217,14 @@ h1 {
   width: 100%;
   height: 100%;
   padding: 2rem;
-  /* margin: 36p 20p; */
-  /* border: goldenrod 0.25rem dashed; */
 }
 
 .panel {
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  /* margin: 0.25rem; */
   box-shadow: 0 0.375rem 1.125rem rgba(0, 0, 0, 0.06);
   border-radius: 0.25rem;
-  /* padding-inline: 1.5rem; */
-  /* border: gray 0.313rem solid; */
 }
 
 .panel > * {
@@ -267,14 +233,8 @@ h1 {
 
 .main-panel {
   flex-basis: 60%;
-  /* border: 0.188rem solid green; */
   height: 100%;
   margin-right: 0.75rem;
-}
-
-.side-panels,
-.main-panel {
-  /* padding: 2rem; */
 }
 
 .side-panel {
@@ -282,7 +242,6 @@ h1 {
 }
 
 .main-panel .panel {
-  /* background: brown; */
   height: 100%;
 }
 
@@ -290,13 +249,15 @@ h1 {
   border-bottom: 0.063rem solid #ebeff2;
 }
 
+#current-date {
+  display: inline-block;
+  margin-bottom: 1.05rem;
+}
+
 .date-picker {
   display: flex;
   justify-content: space-between;
-  /* border: aqua 4p solid; */
-  /* margin-block: 1rem; */
   margin-bottom: 1.7rem;
-  margin-top: 2.75rem;
 }
 
 .date-picker button {
@@ -334,14 +295,11 @@ h1 {
 }
 
 .date-picker button.current div {
-  /* border: solid red 2p; */
   background: #109cf1;
   color: #ffffff;
   border-radius: 50%;
 }
 
-/* .date-picker button:hover span, */
-/* .date-picker button:hover div { */
 .date-picker button:hover *,
 .date-picker button.hovered * {
   color: #109cf1;
@@ -353,12 +311,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding-block: 1rem;
-  border-bottom: 0.063rem solid #ebeff2;
-  /* background-color: yellow; */
-}
-
-.completion {
-  /* border: 3px dashed red; */
 }
 
 .progress-bar-container {
@@ -375,12 +327,10 @@ h1 {
 }
 
 .side-panels {
-  /* flex: 2; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  /* border: orange 0.188rem solid; */
 }
 
 .show {
@@ -413,8 +363,6 @@ h1 {
 }
 
 .task {
-  /* border: black solid 1p; */
-  /* margin-block: 1.6rem; */
   margin-block-start: 1.6rem;
   margin-block-end: 1rem;
   padding: 1rem;
@@ -426,9 +374,6 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.task-name {
 }
 
 .due-date {
@@ -462,13 +407,11 @@ h1 {
   align-items: center;
   justify-content: space-between;
   margin-top: 0.75rem;
-  /* border: lime 3p solid; */
 }
 
 .asignee {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
 }
 
 .asignee-img {
@@ -518,17 +461,12 @@ h1 {
   background-color: #f7685b;
 }
 
-#deals-graph {
-  /* width: 90%; */
-}
-
 .deals-graph {
   display: flex;
   flex-direction: column;
 }
 
 .tasks-chart {
-  /* background: blue; */
   margin-block: 1rem;
 }
 
@@ -543,7 +481,6 @@ h1 {
 
 .graph-label {
   height: 1.25rem;
-  /* border: dotted orange 3p; */
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
@@ -551,9 +488,6 @@ h1 {
   line-height: 0.938rem;
   letter-spacing: 0.01em;
   color: #192a3e;
-
-  /* width: 200p; */
-  /* background: turquoise; */
 }
 
 .deals-graph-label {
@@ -565,12 +499,10 @@ h1 {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  /* border: red 2px solid; */
 }
 
 .tasks-chart .chart-graphic {
   width: 53%;
-  /* border: red 20px solid; */
 }
 
 #show-more {
@@ -584,16 +516,6 @@ h1 {
   color: #109cf1;
 }
 
-@media (max-width: 600px) {
-  /* .sidebar {
-    display: none;
-  } */
-
-  /* .panel,
-  .main-panel,
-  .side-panel */
-}
-
 @media (max-width: 1300px) {
   .sidebar {
     display: none;
@@ -604,40 +526,39 @@ h1 {
   .dashboard {
     flex-direction: column;
     justify-content: flex-start;
+    padding: 0;
+  }
+  .date-picker {
+    display: none;
+  }
+
+  .main-panel,
+  .side-panels .panel {
+    margin: 0;
+  }
+
+  .panel {
+    border-radius: 0;
+  }
+
+  .task:hover .edit-icon {
+    display: none;
+  }
+
+  #show-more {
+    display: none;
+  }
+
+  .panel-name {
+    visibility: hidden;
+  }
+
+  .deals-panel .panel-header {
+    /* I think this looks ugly and wrong
+    but I'm doing it to more exactly match
+    the Figma. */
+    padding-inline-end: 0;
+    margin-right: 1.5rem;
+    /* background: black; */
   }
 }
-
-@media (max-width: 0px) {
-
-/* @media (max-width: 800px) { */
-
-.panel {
-  margin: 0;
-  border-radius: 0;
-}
-
-.panel-name {
-  visibility: hidden;
-}
-
-#show-more {
-  display: none;
-}
-
-/* .date-picker * {
-    display: none;
-  } */
-
-.task:hover .edit-icon {
-  display: none;
-}
-
-.side-panels {
-  /* display: none; */
-}
-}
-/* @media (max-width: 1073px) {
-    .profile-info {
-      visibility: hidden;
-    }
-  } */
