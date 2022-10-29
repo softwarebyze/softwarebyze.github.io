@@ -223,6 +223,10 @@ h1 {
   margin-right: 1.5rem;
 }
 
+#notification-icon:hover {
+  cursor: pointer;
+}
+
 .dashboard {
   display: flex;
   justify-content: space-evenly;
