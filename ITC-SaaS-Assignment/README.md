@@ -7,7 +7,7 @@ We encourage you to write your own CSS. However, you can use Bootstrap for styli
 you prefer.
 
 In the Figma files, you will find the CSS style properties that the designer used for things like sizes, margin, padding, colors, fonts, icons and more. Those styles are very helpful, but you should know that the layout style properties (like position, top, right, bottom, left) are not always on point.
-You may find that you don't use the same exact layout properties from the Figma design in your work. 
+You may find that you don't use the same exact layout properties from the Figma design in your work.
 
 The Figma design has a few charts. You DO NOT need to
 create the charts using HTML and CSS. Instead, you can export the
