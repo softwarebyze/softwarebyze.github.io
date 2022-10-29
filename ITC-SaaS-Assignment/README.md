@@ -20,9 +20,7 @@ Then, you have a private copy to work from and therefore won't see your classmat
 
 Good luck and have fun!
 
-<!-- ![Desktop View](./desktop-view.png) ![Mobile View](./mobile-view.png) -->
-
 <p align="center">
-  <img alt="Desktop View" src="./desktop-view.png" width="77.8%">
-  <img alt="Desktop View" src="./mobile-view.png" width="21.3%">
+  <img alt="Desktop View" src="./images/instructions/desktop-view.png" width="77.8%">
+  <img alt="Desktop View" src="./images/instructions/mobile-view.png" width="21.3%">
 </p>
