@@ -380,6 +380,13 @@ h1 {
   align-items: center;
 }
 
+.task-name {
+  width: 66%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .due-date {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
