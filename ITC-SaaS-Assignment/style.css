@@ -440,6 +440,7 @@ h1 {
 
 .asignee-img {
   margin-right: 0.75rem;
+  border-radius: 50%;
 }
 
 .glyphs {
