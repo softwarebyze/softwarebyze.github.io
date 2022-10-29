@@ -20,13 +20,7 @@ Then, you have a private copy to work from and therefore won't see your classmat
 
 Good luck and have fun!
 
-Required design from Figma:
-
 <p align="center">
   <img alt="Desktop View" src="./images/instructions/desktop-view.png" width="77.8%">
   <img alt="Desktop View" src="./images/instructions/mobile-view.png" width="21.3%">
 </p>
-
-My work:
-
-<iframe src="ITC-SaaS-Assignment/index.html" height="300" width="100%"></iframe> 
