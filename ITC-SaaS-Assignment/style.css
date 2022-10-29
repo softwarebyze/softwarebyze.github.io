@@ -145,20 +145,25 @@ h1 {
   cursor: pointer;
 }
 
+.sidebar .toggle:hover {
+  cursor: pointer;
+}
+
 .sidebar li.selected svg path,
 .sidebar li:hover svg path,
-.sidebar .settings:hover svg path,
-.sidebar .toggle:hover svg path {
+.sidebar .settings:hover svg path {
   stroke: #109cf1;
   cursor: pointer;
+}
+
+.sidebar .toggle:hover svg path {
+  fill: #109cf1;
 }
 
 .sidebar li:hover svg rect,
 .sidebar .settings:hover svg path {
   fill: #109cf1;
 }
-
-
 
 .profile {
   display: flex;
@@ -367,6 +372,7 @@ h1 {
   line-height: 1.125rem;
   appearance: none;
   padding-inline: 0.313rem;
+  background-color: transparent;
 }
 
 .show select:hover {
