@@ -153,6 +153,13 @@ h1 {
   cursor: pointer;
 }
 
+.sidebar li:hover svg rect,
+.sidebar .settings:hover svg path {
+  fill: #109cf1;
+}
+
+
+
 .profile {
   display: flex;
   align-items: center;
@@ -525,6 +532,10 @@ h1 {
   text-align: center;
   letter-spacing: 0.01em;
   color: #109cf1;
+}
+
+#show-more:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 1300px) {
